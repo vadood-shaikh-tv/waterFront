@@ -1,0 +1,171 @@
+
+.GuestSection {
+   
+    .GuestDetails {
+        margin-top: 25px;
+
+        .QuestionSection {
+
+            h3:hover {
+                text-decoration: none !important;
+            }
+        }
+
+        .FaqList {
+            text-align: center;
+        }
+
+        .boxStyle {
+            padding: 30px;
+            background-color: #fff;
+            border: 1px solid #E9E8E8;
+            margin-bottom: 30px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+            a {
+                color: #000;
+            }
+
+            img {
+                width: 80px;
+            }
+
+            h3 {
+                margin-top: 25px;
+                font-weight: 700;
+
+                &:hover {
+                    text-decoration: underline;
+                    text-decoration-color: #4cb2dc;
+
+                }
+            }
+
+            .SearchSec {
+                .SetPosition {
+                    position: relative;
+                    margin: 25px 0;
+
+                    .form-outline {
+                        width: calc(100% - 210px);
+                    }
+
+                    button.SeacrhFaqbtn {
+                        background-color: #FF2851;
+                        color: #fff;
+                        border: 1px solid #E9E8E8;
+                        height: 44px;
+                        width: 160px;
+                        border-left: none;
+                        font-weight: 500;
+                        font-size: 17px;
+                        padding: 9px 20px;
+                    }
+
+                    input#form1 {
+                        height: 42px;
+                        border-radius: 0;
+                        border: 1px solid #E9E8E8;
+                        margin-top: 1px;
+                        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                        padding-left: 35px;
+                    }
+
+                    .searchIconSet {
+                        position: absolute;
+                        top: 15px;
+                        color: #4A4A4A;
+                        left: 15px;
+                    }
+                }
+            }
+
+            .GoFaqBtn {
+                font-size: 18px;
+                line-height: 21px;
+                padding: 12px 34px;
+                font-weight: 700;
+                border: 2px solid #fff;
+            }
+        }
+
+        .LostSection {
+            padding-top: 10px !important;
+        }
+        .LostSection{
+            .LostHeading
+            { h3:hover {
+                text-decoration: none !important;
+            }
+            p {
+                font-size: 12px;
+                margin-bottom: 8px;
+            }
+        }
+            .LostFormSec{
+                textarea#floatingTextarea2 {
+                     height: 110px !important;
+                    }
+                    .SubmitBtn {
+                        background-color: #FF2851;
+                        text-transform: uppercase;
+                        height: 44px;
+                        border: none;
+                        font-size: 18px;
+                        margin-top: 15px;
+                        font-weight: 700;
+                        color: #fff;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Extra small devices (phones, 600px and down) */
+@media  (max-width: 768px) {
+    
+    .GuestSection{ .input-group {
+        display: block;
+        width: 100%;
+        
+        .form-outline {
+            width: calc(100% - 0px) !important;
+            
+        }
+    }
+     .GuestHeading {
+        margin-top: 20px ;
+    }
+    }
+    .SetPosition button.SeacrhFaqbtn{
+        width: 100% !important;
+    }
+    .boxStyle {
+        padding:20px !important;
+         h3 {
+            margin-top: 5px !important;
+        }
+        .GoFaqBtn{
+            width: 100%;
+        }
+        img {
+            margin-bottom: 15px;
+        }
+    }
+    .LostSection{
+        margin-top: 20px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media  (min-width: 768px) and (max-width:992px){}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media  (min-width: 992px) and (max-width:1200) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media  (min-width: 1200px) and (max-width:1400) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media  (min-width: 1400px) {}

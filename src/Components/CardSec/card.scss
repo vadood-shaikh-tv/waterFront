@@ -1,0 +1,154 @@
+.XmaxCard {
+    display: flex;
+
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+
+    .XmasImage {
+        width: 20%;
+
+        .ShowDate {
+            position: absolute;
+            background-color: #000;
+            text-align: center;
+            color: #fff;
+            font-weight: 700;
+            padding: 0px 10px;
+            font-size: 16px;
+            height: 50px;
+
+            p {
+                margin: 0;
+            }
+        }
+
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .XmasDetails {
+        padding-left: 25px;
+        padding-top: 20px;
+        position: relative;
+        background-color: #fff;
+        width: 20%;
+
+        .EveHeading h5 {
+            color: #000;
+            font-weight: 700;
+        }
+
+        .PartyHeading {
+            margin-top: 30px;
+
+            button {
+                outline: 3px solid #4CB2DC;
+                background-color: #4CB2DC;
+                color: #fff;
+                border: 1px solid #fff;
+                box-shadow: none;
+                font-weight: 600;
+                font-size: 13px;
+                padding: 6px 14px;
+
+                img {
+                    padding-right: 3px;
+                }
+            }
+
+            a {
+                color: #4CB2DC;
+                text-decoration: underline;
+                font-size: 11px;
+            }
+
+            p {
+                margin: 8px 0;
+                font-size: 12px;
+            }
+
+            button {
+                margin-bottom: 7px;
+            }
+        }
+
+        .cardFooter {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+
+            .PriceSec {
+                display: flex;
+            }
+
+            button.Price {
+                background-color: #4A4A4A;
+                color: #fff;
+                padding: 8px 30px;
+                border: 0;
+                font-size: 17px;
+                font-weight: 600;
+            }
+
+            button.SaleHeading {
+                width: 100%;
+                background-color: #FF2851;
+                border: 0;
+                color: #fff;
+                font-size: 17px;
+                font-weight: 600;
+            }
+        }
+    }
+}
+/* Extra small devices (phones, 600px and down) */
+@media  (max-width: 768px) {
+    .XmaxCard {
+        display: block;
+    
+     .XmasImage {
+        width: 100%;
+        padding: 0 11px;
+    }
+    .XmasDetails {
+        width: 100%;
+        text-align: center;
+         .PartyHeading {
+            margin-top: 50px;
+        }
+         .cardFooter {
+            bottom: unset;
+            position: relative;
+            margin: 10px 0;
+            padding: 0 15px;
+            left: -10px;
+        }
+    }
+}}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media  (min-width: 768px) and (max-width:992px){
+    .XmaxCard {
+    .XmasImage {
+        width: 50%;
+    }
+    .XmasDetails{
+        width: 50%;
+    }
+}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media  (min-width: 992px) and (max-width:1200) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media  (min-width: 1200px) and (max-width:1400) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media  (min-width: 1400px) {}

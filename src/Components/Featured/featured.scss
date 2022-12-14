@@ -1,0 +1,186 @@
+
+.ShowsSection {
+  background-color: #f6f6f6;
+  .featuredShowSec {
+    margin-top: 30px;
+  }
+
+  .border-BottomClass {
+    border-bottom: 3px solid #000;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+
+  .featuredContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .GetUpdateSec {
+      button.btn {
+        background-color: #4cb2dc;
+        border: 0;
+        color: #fff;
+        border-radius: 0;
+        font-size: 18px;
+        font-weight: 700;
+      }
+    }
+
+    .modal-title {
+      margin: auto;
+    }
+
+    button.btn-close {
+      margin: 0;
+    }
+
+    .modalBG {
+      background-color: #009fd6;
+      margin: 12px;
+      border-radius: 6px;
+      color: #fff;
+
+      .ModalSignupBtn {
+        button.btn {
+          width: 100%;
+          background-color: #fff;
+          color: #009fd6;
+          border: 0;
+          border-radius: 3px;
+          padding: 12px 0;
+        }
+      }
+    }
+
+    .modal-footer {
+      justify-content: center;
+    }
+
+    .SelectSec {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+  }
+
+  .upcomingShowSec {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+
+    i.fa-sharp.fa-solid.fa-list {
+      margin: 0 10px;
+      font-size: 25px;
+      color: #ff2851;
+    }
+  }
+
+  .locationContent {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    .selectHeading {
+      width: auto;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    select.form-select {
+      border: 0;
+      background-color: #f6f6f6;
+      color: #ff2851;
+      font-weight: 400;
+      font-size: 17px;
+      color: #ff2851;
+
+      option {
+        color: black;
+      }
+    }
+  }
+}
+
+// ul.nav.nav-tabs {
+//   justify-content: end;
+//   border: 0;
+//   position: relative;
+//   top: -70px;
+//   left: -83px;
+// button#controlled-tab-example-tab-home {
+//     color: transparent;
+//     background-color: transparent;
+//     border: 0;
+// }
+// button#controlled-tab-example-tab-profile{
+//   color: transparent;
+//     background-color: transparent;
+//     border: 0;
+// }
+// }
+
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 768px) {
+  .ShowsSection {
+    margin-top: 30px;
+
+    h1 {
+      font-size: 32px;
+    }
+
+    .featuredContent {
+      display: block;
+
+      .GetUpdateSec button.btn {
+        width: 100%;
+        margin-bottom: 7px;
+      }
+
+      .SelectSec {
+        display: block;
+
+        .GridIcon {
+          position: absolute;
+          top: 5px;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  .upcomingShowSec {
+    margin-top: 40px !important;
+
+    .locationContent {
+      justify-content: flex-start;
+    }
+  }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media (min-width: 768px) and (max-width:992px) {
+  .ShowsSection {
+    
+    .upcomingShowSec {
+      margin-top: 60px;
+      .featuredContent{
+        display: block;
+        .SelectSec{
+          justify-content: space-between;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 992px) and (max-width:1200) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 1200px) and (max-width:1400) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media (min-width: 1400px) {}

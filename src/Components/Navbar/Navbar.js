@@ -3,6 +3,9 @@ import EventPage from "../EventsPage/EventPage";
 import HeaderLogo from "../../Assets/Images/HeaderLogo.png";
 import "../Navbar/navbar.scss";
 import CompanyNames from "../CompanyNames/CompanyNames";
+import Featured from "../Featured/Featured";
+import Footer from "../Footer/Footer";
+import { Link } from "react-router-dom";
 export default function Navbar() {
   return (
     <>
@@ -21,6 +24,9 @@ export default function Navbar() {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
               <span className="navbar-toggler-icon"></span>
             </button>
             <div
@@ -28,32 +34,41 @@ export default function Navbar() {
               id="navbarSupportedContent"
             >
               <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="#">
-                    EVENTS
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    VENEUS
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    GUEST SERVICES
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    PACKAGES
-                  </a>
-                </li>
-                <li className="nav-item dropdown">
+                <Link to="/">
+                  <li className="nav-item">
+                    <a className="nav-link active" aria-current="page" href="#">
+                      EVENTS
+                    </a>
+                  </li>
+                </Link>
+                <Link to="/Venue">
+                  <li className="nav-item">
+                    <a className="nav-link" href="#">
+                      VENEUS
+                    </a>
+                  </li>
+                </Link>
+                <Link to="/GuestService">
+                  <li className="nav-item">
+                    <a className="nav-link" href="#">
+                      GUEST SERVICES
+                    </a>
+                  </li>
+                </Link>
+                <Link to="/Job">
+                  <li className="nav-item">
+                    <a className="nav-link" href="#">
+                      JOB
+                    </a>
+                  </li>
+                </Link>
+                <li className="nav-item dropdown" >
                   <a
                     className="nav-link dropdown-toggle"
                     href="#"
                     role="button"
                     data-bs-toggle="dropdown"
+
                     aria-expanded="false"
                   >
                     TICKETS
@@ -89,7 +104,7 @@ export default function Navbar() {
                 </li>
               </ul>
             </div>
-            <div className="SocialIcons">
+            <div className="SocialIcons mobileViewHide">
               <a href="">
                 <i className="fa-brands fa-facebook"></i>
               </a>
@@ -113,8 +128,10 @@ export default function Navbar() {
           </div>
         </nav>
       </div>
-      <EventPage />
+      {/* <EventPage />
       <CompanyNames />
+      <Featured />
+      <Footer /> */}
     </>
   );
 }

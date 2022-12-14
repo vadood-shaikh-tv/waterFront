@@ -1,0 +1,136 @@
+footer {
+a{
+    text-decoration: none;
+    color: #fff;
+}
+    .FooterSection {
+        background-color: #FF2851;
+        margin-top: 50px;
+
+        .FooterDetails {
+            color: #fff;
+            text-align: center;
+
+            img {
+                width: 11%;
+                margin: 15px;
+            }
+
+            span.DownloadHeading {
+                font-size: 21px;
+                font-weight: 700;
+            }
+
+            span.FavHeading {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .bgBlack {
+        background-color: black;
+        padding: 15px;
+
+        .NavbarSection {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            img.HeaderLogoIcon{
+                width: 121px;
+            }
+            ul.pagelinks {
+                display: flex;
+                li {
+                    list-style: none;
+                    padding: 10px;
+                }
+            }
+            i.fa-brands {
+                color: black;
+                background-color: grey;
+                border-radius: 50%;
+                padding: 3px;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .LastLine {
+        text-align: center;
+        background-color: #272727;
+        color: #fff;
+
+        p {
+            margin: 0;
+            padding: 12px;
+
+            a {
+                color: #4cb2dc;
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: #248db8;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+/* Extra small devices (phones, 600px and down) */
+@media  (max-width: 768px) {
+    .FooterSection{
+        span.DownloadHeading {
+            display: block;
+            text-align: start;
+        }
+        span.FavHeading {
+            text-align: start;
+            display: block;
+        }
+        .FooterDetails{
+        padding-top: 10px;
+         img {
+            width: 33% !important;
+            margin: 15px;
+        }}
+    }
+         .pagelinks {
+            width: auto;
+            text-align: center;
+            padding: 0 15px 15px;
+            line-height: 24px;
+            margin-top: 15px;
+            display: block !important;
+        li{
+            list-style-type: none;
+            display: inline;
+            font-size: 13px;
+                a{
+                    color: #fff;
+                    margin: 13px 
+                }
+            }    
+        }
+        .bgBlack{
+            text-align: center;
+            padding-top: 25px !important;
+            .NavbarSection {
+                display: block !important;
+            }
+           
+            
+        }
+}
+        
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media  (min-width: 768px) and (max-width:992px){}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media  (min-width: 992px) and (max-width:1200) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media  (min-width: 1200px) and (max-width:1400) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media  (min-width: 1400px) {}

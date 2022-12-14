@@ -1,10 +1,49 @@
-.companySec{
+.companySec {
+    background-color: #fff;
+
     .companys {
         padding: 20px 15px;
-        img{
+
+        img.companyIcon {
             width: 100%;
             filter: grayscale(100%);
             webkit-filter: grayscale(100%);
         }
+
+        img.companyIcon:hover {
+            filter: grayscale(0%);
+        }
     }
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 768px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media (min-width: 768px) and (max-width:992px) {
+    .companySec {
+        .companys {
+            padding: 15px 5px;
+        }
+    }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 992px) and (max-width:1200px) {
+    .XmaxCard {
+        .XmasImage {
+            width: 30% !important;
+        }
+
+        .XmasDetails {
+            width: 30% !important;
+        }
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 1200px) and (max-width:1400px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media (min-width: 1400px) {}

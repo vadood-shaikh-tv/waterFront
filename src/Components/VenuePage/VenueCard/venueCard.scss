@@ -1,0 +1,87 @@
+.VenueShowsCard {
+    margin-top: 30px;
+
+    .VenueCardSection {
+        .VenueCard {
+            .card {
+                border-radius: 0;
+                height: 297px;
+
+                .CardImage {
+                    margin: auto;
+                    padding: 22px 26px;
+
+                    img {
+                        width: 190px;
+                        height: 90px;
+                    }
+                }
+
+                hr {
+                    margin: 0;
+                }
+
+                .VenueCardDetail {
+                    text-align: center;
+                    margin-top: 24px;
+                    margin-bottom: 10px;
+
+                    h5.card-title {
+                        font-weight: 700;
+                    }
+
+                    p.card-text {
+                        font-size: 12px;
+                        color: #4a4a4a;
+                    }
+                }
+
+                .card-footer {
+                    padding: 0;
+
+                    .MoreInfoBtn {
+                        font-weight: 700;
+                        border: 0;
+                        border-radius: 0;
+                        width: 100%;
+                        padding: 10px;
+
+                        &:hover,
+                        :focus {
+                            background-color: #289dcd;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 768px) {
+    .VenueCardSection {
+        .card {
+            height: 319px !important;
+
+            .CardImage {
+                padding: 30px 26px;
+            }
+
+            h5.card-title {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media (min-width: 768px) and (max-width:992px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 992px) and (max-width:1200) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 1200px) and (max-width:1400) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media (min-width: 1400px) {}
