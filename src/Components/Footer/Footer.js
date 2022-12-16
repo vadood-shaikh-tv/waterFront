@@ -4,6 +4,7 @@ import HeaderLogo from "../../Assets/Images/HeaderLogo.png";
 import AppStoreIcon from "../../Assets/Images/appStoreIcon.png";
 import "../../Components/Navbar/navbar.scss";
 import "../Footer/footer.scss";
+import { NavLink } from "react-router-dom";
 export default function Footer() {
   return (
     <>
@@ -41,24 +42,36 @@ export default function Footer() {
               </a>
 
               <ul className="pagelinks">
-                <li className="active">
-                  <a href="/">Events</a>
-                </li>
-                <li>
-                  <a href="/venues">Venues</a>
-                </li>
-                <li>
-                  <a href="/guest">Guest Services</a>
-                </li>
-                <li>
-                  <a href="/package">Packages</a>
-                </li>
-                <li>
-                  <a href="/contact">Contact</a>
-                </li>
-                <li>
-                  <a href="/faq">FAQ</a>
-                </li>
+                <NavLink className="footer-nav-link" to="/">
+                  <li >
+                    <a href="/">EVENTS</a>
+                  </li>
+                </NavLink>
+                <NavLink className="footer-nav-link" to="/Venue">
+                  <li>
+                    <a href="/venues">VENUES</a>
+                  </li>
+                </NavLink>
+                <NavLink className="footer-nav-link" to="/GuestService">
+                  <li>
+                    <a href="/guest">GUEST SERVICES</a>
+                  </li>
+                </NavLink>
+                <NavLink className="footer-nav-link" to="/Job">
+                  <li>
+                    <a href="/job">JOB</a>
+                  </li>
+                </NavLink>
+                <NavLink className="footer-nav-link" to="/Contact">
+                  <li>
+                    <a href="/contact">CONTACT</a>
+                  </li>
+                </NavLink>
+                <NavLink className="footer-nav-link" to="/FAQ">
+                  <li>
+                    <a href="/faq">FAQ</a>
+                  </li>
+                </NavLink>
               </ul>
               <div className="SocialIcons">
                 <a href="">

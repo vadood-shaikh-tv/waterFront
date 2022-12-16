@@ -1,11 +1,23 @@
 import Card from "../CardSec/Card";
 import "../Featured/featured.scss";
 import React, { useState } from "react";
-import Tab from "react-bootstrap/Tab";
-import Tabs from "react-bootstrap/Tabs";
+import { Link, Outlet } from "react-router-dom";
+
 
 export default function Featured() {
-  const [key, setKey] = useState("home");
+  // const [key, setKey] = useState("home");
+
+
+  // render
+  const [isShown, setIsShown] = useState(false);
+
+  const handleClick = event => {
+    // 👇️ toggle shown state
+    setIsShown(current => !current);
+
+    // 👇️ or simply set it to true
+    // setIsShown(true);
+  };
   return (
     <>
       <div className="ShowsSection">
@@ -106,15 +118,15 @@ export default function Featured() {
 
                                 <div className="mb-4">
                                   <label
-                                    htmlFor="exampleInputPassword1"
+                                    htmlFor="exampleInput1"
                                     className="form-label"
                                   >
                                     Postal Code
                                   </label>
                                   <input
-                                    type="password"
+                                    type=""
                                     className="form-control"
-                                    id="exampleInputPassword1"
+                                    id="exampleInput"
                                   />
                                 </div>
 
@@ -204,40 +216,41 @@ export default function Featured() {
                       </div>
                     </div>
                     <div className="GridIcon">
-                      <span>
-                        <i
-                          className="fa-sharp fa-solid fa-list"
-                          eventkey="home"
-                          title="Home"
-                        ></i>
-                      </span>
-                      <span>
-                        <i className="fa-sharp fa-solid fa-list"></i>
-                      </span>
+                      <Link to="Card" >
+                        <span className="gridIcon" >
+                          <i
+                            className="fa-sharp fa-solid fa-list"
+                            eventkey="home"
+                            title="Home"
+                          ></i>
+                        </span>
+                      </Link>
+                      <Link to="SecondCard">
+                        <span className="gridIcon">
+                          <i className="fa-sharp fa-solid fa-list"></i>
+                        </span>
+                      </Link>
                     </div>
+
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      {/* tabs */}
-      <div className="TabsSec">
-        <div className="container">
-          <Tabs
-            id="controlled-tab-example"
-            activeKey={key}
-            onSelect={(k) => setKey(k)}
-            className="mb-3"
-          >
-            <Tab eventKey="home" title="Home">
-              <Card />
-            </Tab>
-            <Tab eventKey="profile" title="Profile">
-              <h1>world</h1>
-            </Tab>
-          </Tabs>
+          <div className="row">
+            <Outlet />
+            {/* render
+            <>
+              {isShown && (
+                <div>
+
+                </div>
+              )} {isShown && <Card />}
+            </> */}
+
+
+
+          </div>
         </div>
       </div>
     </>

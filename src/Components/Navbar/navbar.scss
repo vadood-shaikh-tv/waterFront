@@ -1,9 +1,24 @@
 $color-red: #FF2851;
 $color-white: #ffffff;
 .NavbarSection {
+    a.nav-bar-link >li:hover >a:after {
+        content: " ";
+        height: 3px;
+        width: 100%;
+        background-color: #FF2851;
+        display: block;
+    }
+    a.nav-bar-link.active li >a:after {
+        content: " ";
+        height: 3px;
+        width: 100%;
+        background-color: #FF2851;
+        display: block;
+    }
     nav.navbar {
         background-color: #000;
         ul.navbar-nav {
+            
             margin-right: 40px;
         }
         img.HeaderLogoIcon {
@@ -22,12 +37,12 @@ $color-white: #ffffff;
                 color:  $color-white;
                 padding: 5px 0;
             }
-            
-            a.nav-link:hover {
-                padding-bottom: 0px;
-                border-bottom: 2px solid $color-red;
-                transition: 0;
-            }
+           
+            // a.nav-link:hover {
+            //     padding-bottom: 0px;
+            //     border-bottom: 2px solid $color-red;
+            //     transition: 0;
+            // }
             ul.dropdown-menu {
                 border-radius: 3px;
                 a.dropdown-item {
@@ -56,9 +71,7 @@ $color-white: #ffffff;
 
 /* Extra small devices (phones, 600px and down) */
 @media  (max-width: 768px) {
-    .mobileViewHide {
-        display: none;
-    }
+ 
  
     button.navbar-toggler{
         transform: rotate(90deg);
@@ -87,10 +100,10 @@ $color-white: #ffffff;
 @media  (min-width: 768px) and (max-width:992px){}
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media  (min-width: 992px) and (max-width:1200) {}
+@media  (min-width: 992px) and (max-width:1200px) {}
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media  (min-width: 1200px) and (max-width:1400) {}
+@media  (min-width: 1200px) and (max-width:1400px) {}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media  (min-width: 1400px) {}

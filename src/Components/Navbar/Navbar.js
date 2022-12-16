@@ -1,11 +1,8 @@
 import React from "react";
-import EventPage from "../EventsPage/EventPage";
 import HeaderLogo from "../../Assets/Images/HeaderLogo.png";
 import "../Navbar/navbar.scss";
-import CompanyNames from "../CompanyNames/CompanyNames";
-import Featured from "../Featured/Featured";
-import Footer from "../Footer/Footer";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+// import { Link } from "react-router-dom";
 export default function Navbar() {
   return (
     <>
@@ -34,34 +31,37 @@ export default function Navbar() {
               id="navbarSupportedContent"
             >
               <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                <Link to="/">
+
+                <NavLink className="nav-bar-link" to="/">
                   <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="#">
+                    <a className="nav-link" aria-current="page" href="#">
                       EVENTS
                     </a>
                   </li>
-                </Link>
-                <Link to="/Venue">
+                </NavLink>
+
+
+                <NavLink className="nav-bar-link" to="/Venue">
                   <li className="nav-item">
                     <a className="nav-link" href="#">
                       VENEUS
                     </a>
                   </li>
-                </Link>
-                <Link to="/GuestService">
+                </NavLink>
+                <NavLink className="nav-bar-link" to="/GuestService">
                   <li className="nav-item">
                     <a className="nav-link" href="#">
                       GUEST SERVICES
                     </a>
                   </li>
-                </Link>
-                <Link to="/Job">
+                </NavLink>
+                <NavLink className="nav-bar-link" to="/Job">
                   <li className="nav-item">
                     <a className="nav-link" href="#">
                       JOB
                     </a>
                   </li>
-                </Link>
+                </NavLink>
                 <li className="nav-item dropdown" >
                   <a
                     className="nav-link dropdown-toggle"
@@ -92,16 +92,19 @@ export default function Navbar() {
                     </li>
                   </ul>
                 </li>
+
                 <li className="nav-item">
                   <a className="nav-link" href="#">
                     WFC STORE
                   </a>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    FAQ
-                  </a>
-                </li>
+                <NavLink className="nav-bar-link" to="/Faq">
+                  <li className="nav-item">
+                    <a className="nav-link" href="#">
+                      FAQ
+                    </a>
+                  </li>
+                </NavLink>
               </ul>
             </div>
             <div className="SocialIcons mobileViewHide">
@@ -127,7 +130,7 @@ export default function Navbar() {
             </div>
           </div>
         </nav>
-      </div>
+      </div >
       {/* <EventPage />
       <CompanyNames />
       <Featured />

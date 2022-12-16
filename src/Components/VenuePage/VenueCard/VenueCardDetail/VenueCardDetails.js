@@ -1,15 +1,15 @@
 import React from "react";
 import Footer from "../../../Footer/Footer";
 import Navbar from "../../../Navbar/Navbar";
-// import "../../../VenuePage/VenueCard/VenueCardDetail/venueCardDetail.scss";
-import VenueCompanyImg from "../../../../Assets/Images/companyImage2.png";
+// import VenueCompanyImg from "../../../../Assets/Images/companyImage2.png";
 import SeatingChartImgOne from "../../../../Assets/Images/SeatingImage1.jpg";
 import SeatingChartImgTwo from "../../../../Assets/Images/SeatingImage2.jpg";
 import SeatingChartImgThree from "../../../../Assets/Images/SeatingImage3.jpg";
 import SeatingChartImgFour from "../../../../Assets/Images/SeatingImage4.jpg";
 import SeatingChartImgFive from "../../../../Assets/Images/SeatingImage5.jpg";
 import SeatingChartImgSix from "../../../../Assets/Images/SeatingImage6.jpg";
-
+import "../venueCard.scss"
+import { Link } from "react-router-dom";
 
 
 export default function VenueCardDetails() {
@@ -26,9 +26,11 @@ export default function VenueCardDetails() {
                                         <h1>CROSS INSURANCE EVENT</h1>
                                     </div>
                                     <div className="BackToVenueSec">
-                                        <button type="" className="BackToVenueBtn btn-primary">
-                                            BACK TO VENUES LIST
-                                        </button>
+                                        <Link to="/Venue">
+                                            <button type="" className="BackToVenueBtn btn-primary">
+                                                BACK TO VENUES LIST
+                                            </button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -37,20 +39,20 @@ export default function VenueCardDetails() {
                             <div className="col-md-8">
                                 <div className="VenueCompanyDetails-Section boxStyle">
                                     <div className="VenueCompanyImg">
-                                        <img src={VenueCompanyImg} alt="" />
+                                        <img src="https://d13r7tundc6p2h.cloudfront.net/img-1634049593807.jpg" alt="" />
                                     </div>
                                     <div className="VenueDirection">
                                         <div className="VenueDirectionHeading">
                                             <h3>DIRECTIONS</h3>
-                                            <p>515 Main StreetBangor, ME 04401</p>
-                                            <p>From I-95 North or South:</p>
+                                            <p >515 Main StreetBangor, ME 04401</p>
+                                            <p className="bold">From I-95 North or South:</p>
                                             <p>
                                                 Take Exit 182A to I-395 East.Follow to Exit 3B (Main
                                                 Street)Take a right onto Main StreetTake a left onto
                                                 Buck Street at the Third lightParking will be on your
                                                 left
                                             </p>
-                                            <p>From Route 1A:</p>
+                                            <p className="bold">From Route 1A:</p>
                                             <p>
                                                 From Ellsworth, travel to I-395 WestFollow to Exit 3
                                                 (Main Street) Take a right onto Main StreetTake a left
@@ -71,7 +73,7 @@ export default function VenueCardDetails() {
                                 </div>
                                 <div className="VenueCompanyDetails-Section boxStyle">
                                     <h3>RULES</h3>
-                                    <p className="sm-bold">
+                                    <p className="bold">
                                         Are cameras allowed at the Cross Insurance Center during
                                         events?
                                     </p>
@@ -84,14 +86,14 @@ export default function VenueCardDetails() {
                                         you should call the Box Office to at (207) 561-8333 to
                                         determine if the event you are attending allows cameras.
                                     </p>
-                                    <p className="sm-bold">ATMs?</p>
+                                    <p className="bold">ATMs?</p>
                                     <p>
                                         There are two ATMs located in the facility. One is located
                                         in the Southeast Lobby across from the Box Office. The
                                         second ATM is located through the Southwest Entrance on the
                                         leftside of the concourse.
                                     </p>
-                                    <p className="sm-bold">
+                                    <p className="bold">
                                         Are children required to have a valid ticket?
                                     </p>
                                     <p>
@@ -101,7 +103,7 @@ export default function VenueCardDetails() {
                                         older to possess a ticket and will be noted within event
                                         details.
                                     </p>
-                                    <p className="sm-bold">
+                                    <p className="bold">
                                         Can I bring in my own food and drinks?
                                     </p>
                                     <p>
@@ -109,7 +111,7 @@ export default function VenueCardDetails() {
                                         Most water bottles are permitted.
                                     </p>
 
-                                    <p className="sm-bold">
+                                    <p className="bold">
                                         At what time will the general public be allowed to enter the
                                         Cross Insurance Center on event day?
                                     </p>
@@ -117,7 +119,7 @@ export default function VenueCardDetails() {
                                         For most events, doors open one hour prior to the event
                                         start time, otherwise will be noted within event details.
                                     </p>
-                                    <p className="sm-bold">
+                                    <p className="bold">
                                         Does the Cross Insurance Center prohibit guests from
                                         entering with certain items?
                                     </p>
@@ -143,18 +145,18 @@ export default function VenueCardDetails() {
                                         <li>Skateboards or rollerblades</li>
                                         <li>Water bottles or mugs</li>
                                     </ul>
-                                    <p className="sm-bold">
+                                    <p className="bold">
                                         Once I enter the Cross Insurance Center, am I allowed to
                                         exit and re-enter using the same ticket?
                                     </p>
-                                    <p className="sm-bold">
+                                    <p >
                                         The Cross Insurance Center has a no reentry policy for
                                         ticketed events. Any guest who leaves the facility during an
                                         event is required to present an unused ticket to gain
                                         admission. In the event of a special circumstance or
                                         emergency, please contact a staff member for assistance.
                                     </p>
-                                    <p>Can I smoke at the Cross Insurance Center?</p>
+                                    <p className="bold">Can I smoke at the Cross Insurance Center?</p>
                                     <p>
                                         The Cross Insurance Center is a non-smoking facility, except
                                         in designated smoking areas. All seating areas are
@@ -165,104 +167,107 @@ export default function VenueCardDetails() {
                                 </div>
                             </div>
                             <div className="col-md-4">
-                                <div className="VenueBoxSec boxStyle">
-                                    <h3> BOX OFFICE</h3>
-                                    <p>1-207-561-8300</p>
-                                    <p>
-                                        Trusted Choice Box Office at the Cross Insurance Center is
-                                        located at 515 Main Street, Bangor, ME 04401.
-                                    </p>
-                                    <p>HOURS OF OPERATION</p>
-                                    <p>Monday - Friday 10:00 AM to 5:00 PM</p>
-                                    <p>
-                                        Trusted Choice Box Office also operates with different
-                                        and/or additional hours on most event days. Hours are
-                                        subject to change.
-                                    </p>
-                                    <p>
-                                        During on-sale dates/times, the Trusted Choice Box Office at
-                                        the Southwest Entrance will become the main box office to
-                                        purchase tickets*
-                                    </p>
-                                    <p>TICKET PURCHASING INFO</p>
-                                    <p>
-                                        There are no refunds and no exchanges on any ticket
-                                        purchased for a Cross Insurance Center concert, game or
-                                        event. In the event that a show is canceled or rescheduled,
-                                        please contact the original point of purchase.
-                                    </p>
-                                    <p>
-                                        Ticketmaster is the official ticketing service provider for
-                                        the Cross Insurance Center. The venue cannot confirm the
-                                        validity of, or be responsible for, tickets that have not
-                                        been purchased directly from the venue Box Office,
-                                        Ticketmaster or stated ticket outlet.
-                                    </p>
-                                    <p>
-                                        For additional information or questions, call the Cross
-                                        Insurance Center Box Office at 207-561-8333. *Tickets cannot
-                                        be purchased through this phone number.
-                                    </p>
-                                    <p>ORDER ONLINE AT TICKETMASTER</p>
-                                    <p>
-                                        Ticketmaster is the official ticketing service provider for
-                                        the Cross Insurance Center.
-                                    </p>
-                                    <p>
-                                        Additional fees may apply when purchasing online through
-                                        Ticketmaster*
-                                    </p>
-                                    <p>WILL CALL PROCEDURES</p>
-                                    <p>
-                                        Will Call tickets may be picked up at the Box Office
-                                        beginning 2 hours prior to the event. Picture ID and credit
-                                        card used for purchase are required for pickup.
-                                    </p>
-                                    <p>GROUP TICKETS</p>
-                                    <p>
-                                        There are various shows and events throughout the year that
-                                        offer group discounts. The number that is considered a group
-                                        varies on a show-by-show basis. If you are interested in
-                                        purchasing group tickets for an event, contact the group
-                                        sales department at 207-561-8311.
-                                    </p>
-                                    <p>AGE REQUIREMENT</p>
-                                    <p>
-                                        All individuals must possess a valid ticket for entry into
-                                        the Cross Insurance Center. Children under two (2) years old
-                                        are admitted free of charge for most events, as long as they
-                                        sit on a lap. Please note specific events require children
-                                        12 months or older to possess a ticket and will be noted
-                                        within event details.
-                                    </p>
-                                    <p>Pricing stating "Seniors" refers to patrons 65 years or older.</p>
-                                    <p>For additional information or questions, call the Box Office at 207-561-8333</p>
-                                    <p> *Tickets cannot be purchased through this phone number.</p>
-                                </div>
-                                <div className="SeatingChartSec boxStyle">
-                                    <h3>SEATING CHART</h3>
-                                    <div className="row">
-                                        <div className="col-xs-4 col-md-4 col-sm-4">
-                                            <img src={SeatingChartImgOne} alt="" />
-                                        </div>
-                                        <div className="col-xs-4 col-md-4 col-sm-4">
-                                            <img src={SeatingChartImgTwo} alt="" />
-                                        </div> <div className="col-xs-4 col-md-4 col-sm-4">
-                                            <img src={SeatingChartImgThree} alt="" />
-                                        </div> <div className="col-xs-4 col-md-4 col-sm-4">
-                                            <img src={SeatingChartImgFour} alt="" />
-                                        </div> <div className="col-xs-4 col-md-4 col-sm-4">
-                                            <img src={SeatingChartImgFive} alt="" />
-                                        </div> <div className="col-xs-4 col-md-4 col-sm-4">
-                                            <img src={SeatingChartImgSix} alt="" />
-                                        </div>
+                                <div className="BoxOfficeSection">
 
+                                    <div className="VenueBoxSec boxStyle">
+                                        <h3> BOX OFFICE</h3>
+                                        <p>1-207-561-8300</p>
+                                        <p>
+                                            Trusted Choice Box Office at the Cross Insurance Center is
+                                            located at 515 Main Street, Bangor, ME 04401.
+                                        </p>
+                                        <p className="bold">HOURS OF OPERATION</p>
+                                        <p>Monday - Friday 10:00 AM to 5:00 PM</p>
+                                        <p>
+                                            Trusted Choice Box Office also operates with different
+                                            and/or additional hours on most event days. Hours are
+                                            subject to change.
+                                        </p>
+                                        <p>
+                                            During on-sale dates/times, the Trusted Choice Box Office at
+                                            the Southwest Entrance will become the main box office to
+                                            purchase tickets*
+                                        </p>
+                                        <p className="bold">TICKET PURCHASING INFO</p>
+                                        <p>
+                                            There are no refunds and no exchanges on any ticket
+                                            purchased for a Cross Insurance Center concert, game or
+                                            event. In the event that a show is canceled or rescheduled,
+                                            please contact the original point of purchase.
+                                        </p>
+                                        <p>
+                                            Ticketmaster is the official ticketing service provider for
+                                            the Cross Insurance Center. The venue cannot confirm the
+                                            validity of, or be responsible for, tickets that have not
+                                            been purchased directly from the venue Box Office,
+                                            Ticketmaster or stated ticket outlet.
+                                        </p>
+                                        <p>
+                                            For additional information or questions, call the Cross
+                                            Insurance Center Box Office at 207-561-8333. *Tickets cannot
+                                            be purchased through this phone number.
+                                        </p>
+                                        <p className="bold">ORDER ONLINE AT TICKETMASTER</p>
+                                        <p>
+                                            Ticketmaster is the official ticketing service provider for
+                                            the Cross Insurance Center.
+                                        </p>
+                                        <p>
+                                            Additional fees may apply when purchasing online through
+                                            Ticketmaster*
+                                        </p>
+                                        <p className="bold">WILL CALL PROCEDURES</p>
+                                        <p>
+                                            Will Call tickets may be picked up at the Box Office
+                                            beginning 2 hours prior to the event. Picture ID and credit
+                                            card used for purchase are required for pickup.
+                                        </p>
+                                        <p className="bold">GROUP TICKETS</p>
+                                        <p>
+                                            There are various shows and events throughout the year that
+                                            offer group discounts. The number that is considered a group
+                                            varies on a show-by-show basis. If you are interested in
+                                            purchasing group tickets for an event, contact the group
+                                            sales department at 207-561-8311.
+                                        </p>
+                                        <p className="bold">AGE REQUIREMENT</p>
+                                        <p>
+                                            All individuals must possess a valid ticket for entry into
+                                            the Cross Insurance Center. Children under two (2) years old
+                                            are admitted free of charge for most events, as long as they
+                                            sit on a lap. Please note specific events require children
+                                            12 months or older to possess a ticket and will be noted
+                                            within event details.
+                                        </p>
+                                        <p>Pricing stating "Seniors" refers to patrons 65 years or older.</p>
+                                        <p>For additional information or questions, call the Box Office at 207-561-8333</p>
+                                        <p> *Tickets cannot be purchased through this phone number.</p>
                                     </div>
-                                </div>
-                                <div className="PaymentAccpSec boxStyle">
-                                    <div className="PaymentHead">
-                                        <h3>TYPES OF PAYMENTS ACCEPTED</h3>
-                                        <p>Visa,  Mastercard,  AmericanExpress,  Discover,  Cash,  </p>
+                                    <div className="SeatingChartSec boxStyle">
+                                        <h3>SEATING CHART</h3>
+                                        <div className="row">
+                                            <div className="col-xs-4 col-md-4 col-sm-4">
+                                                <img src={SeatingChartImgOne} alt="" />
+                                            </div>
+                                            <div className="col-xs-4 col-md-4 col-sm-4">
+                                                <img src={SeatingChartImgTwo} alt="" />
+                                            </div> <div className="col-xs-4 col-md-4 col-sm-4">
+                                                <img src={SeatingChartImgThree} alt="" />
+                                            </div> <div className="col-xs-4 col-md-4 col-sm-4">
+                                                <img src={SeatingChartImgFour} alt="" />
+                                            </div> <div className="col-xs-4 col-md-4 col-sm-4">
+                                                <img src={SeatingChartImgFive} alt="" />
+                                            </div> <div className="col-xs-4 col-md-4 col-sm-4">
+                                                <img src={SeatingChartImgSix} alt="" />
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div className="PaymentAccpSec boxStyle">
+                                        <div className="PaymentHead">
+                                            <h3>TYPES OF PAYMENTS ACCEPTED</h3>
+                                            <p>Visa,  Mastercard,  AmericanExpress,  Discover,  Cash,</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

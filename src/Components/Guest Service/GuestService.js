@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import AccessibleIcon from "../../Assets/Images/guestIcon1.png";
 import ACCOMODATIONICON from "../../Assets/Images/guestIcon2.png";
@@ -45,9 +46,11 @@ export default function GuestService() {
                     </div>
                   </div>
                   <div className=" GoFaqPageBtn">
-                    <button type="" className="btn-primary GoFaqBtn">
-                      GO TO FAQ PAGE
-                    </button>
+                    <Link to="/Faq">
+                      <button type="" className="btn-primary GoFaqBtn">
+                        GO TO FAQ PAGE
+                      </button>
+                    </Link>
                   </div>
                 </div>
                 <div className="row">

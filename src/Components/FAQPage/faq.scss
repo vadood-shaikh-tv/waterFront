@@ -1,0 +1,23 @@
+.FAQSection{
+.FaqHeadSec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .FaqPara{
+        span {
+            color: #9B9B9B;
+            a {
+                color: #000;
+            }
+        }
+    }
+}
+.FaqTableSection {
+    margin: 20px 0;
+
+.TableContent{
+    h5{
+        font-size: 18px;
+    }
+}}
+}

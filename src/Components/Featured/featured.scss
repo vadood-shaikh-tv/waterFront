@@ -61,6 +61,9 @@
       display: flex;
       align-items: center;
       position: relative;
+      .form-select:focus{
+        box-shadow: none;
+      }
     }
   }
 
@@ -170,6 +173,7 @@
         .SelectSec{
           justify-content: space-between;
           margin-top: 20px;
+          
         }
       }
     }
@@ -177,10 +181,10 @@
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media (min-width: 992px) and (max-width:1200) {}
+@media (min-width: 992px) and (max-width:1200px) {}
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media (min-width: 1200px) and (max-width:1400) {}
+@media (min-width: 1200px) and (max-width:1400px) {}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media (min-width: 1400px) {}

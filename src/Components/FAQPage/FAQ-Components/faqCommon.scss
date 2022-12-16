@@ -1,0 +1,106 @@
+.TableContent{
+.TableContestList a {
+    color: #000;
+    display: block;
+    padding: 10px 0;
+    width: max-content;
+}}
+.accordion-item {
+    border: 0;
+    border-top: 1px solid#DDDDDD !important;
+    border-radius: 0 !important;
+    .accordion-button{
+        padding: 10px 18px;
+        font-size: 15px;
+        font-weight: 600;
+    }
+    .accordion-button::before{
+        content: "+";
+        color: #FF2851;
+        font-size: 24px;
+        margin-right: 8px;
+        padding-bottom: 7px;
+        width: 18px;
+    }
+    .accordion-button:not(.collapsed)::before{
+        content: "-";
+        color: #FF2851;
+        font-size: 24px;
+        margin-right: 8px;
+        padding-bottom: 7px;
+        width: 18px;
+    }
+    .accordion-button::after{
+        content: "";
+        background-image: none;
+    }
+    .accordion-button:not(.collapsed)::after{
+        content: "";
+        background-image: none;
+    }
+    .accordion-button:focus{
+        box-shadow: none;
+    }
+    .accordion-button:not(.collapsed){
+        color: #000;
+        background-color: #fff;
+      
+    }
+    .accordion-body {
+        padding: 0 45px;
+        font-size: 12px;
+    }
+    div#collapseOne {
+        padding-bottom: 20px;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media  (max-width: 768px) {
+    .tabletVeiwHide{
+        display: none;
+    }
+    .WebViewHide{
+        display: block;
+    }
+    .FaqPara {
+        text-align: end;
+        padding-left: 30px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media  (min-width: 768px) and (max-width:992px){
+    .tabletVeiwHide{
+        display: none;
+    }
+    .WebViewHide{
+        display: block;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media  (min-width: 992px) and (max-width:1200px) {
+    .tabletVeiwHide{
+        display: block;
+    }
+    .WebViewHide{
+        display: none;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media  (min-width: 1200px) and (max-width:1400px) { .tabletVeiwHide{
+    display: block;
+}
+.WebViewHide{
+    display: none;
+}}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media  (min-width: 1400px) { .tabletVeiwHide{
+    display: block;
+}
+.WebViewHide{
+    display: none;
+}}

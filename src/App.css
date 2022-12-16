@@ -13,6 +13,7 @@ h3 {
 }
 a {
   text-decoration: none;
+  color: rgb(175, 175, 175);
 }
 .form-control {
   border-radius: 0;
@@ -40,6 +41,7 @@ a {
 .MainCommon {
   margin-top: 65px;
 }
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -52,5 +54,16 @@ a {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .mobileViewHide {
+    display: none;
+  }
+}
+@media (min-width: 769px) {
+  .HideOnWeb {
+    display: none !important;
   }
 }
