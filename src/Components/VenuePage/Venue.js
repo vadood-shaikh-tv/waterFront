@@ -21,8 +21,8 @@ export default function Venue() {
               </div>
             </div>
             <div className="row">
-              <VenueCard value={"sagar"} title={"TITLESSSSSSSSS"} image={"https://cdn.pixabay.com/photo/2013/07/13/11/44/penguin-158551__340.png"} />
-              <VenueCard />
+              <VenueCard value={"Vadood"} title={"CROSS INSURANCE CENTER"} image={"https://cdn.pixabay.com/photo/2013/07/13/11/44/penguin-158551__340.png"} />
+              <VenueCard value={"sagar"} title={"CROSS INSURANCE ARENA"} image={"https://cdn.pixabay.com/photo/2013/07/13/11/44/penguin-158551__340.png"} />
             </div>
           </div>
         </div>

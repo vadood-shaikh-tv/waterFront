@@ -247,9 +247,6 @@ export default function Featured() {
                 </div>
               )} {isShown && <Card />}
             </> */}
-
-
-
           </div>
         </div>
       </div>

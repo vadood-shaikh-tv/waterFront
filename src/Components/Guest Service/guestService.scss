@@ -140,6 +140,7 @@
     }
     .SetPosition button.SeacrhFaqbtn{
         width: 100% !important;
+        margin-left: 1px !important;
     }
     .boxStyle {
         padding:20px !important;
@@ -159,10 +160,18 @@
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media  (min-width: 768px) and (max-width:992px){}
+@media  (min-width: 768px) and (max-width:992px){
+    .VenueShowsCard .VenueCardSection .VenueCard .card {
+        min-height: 313px;
+    }
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media  (min-width: 992px) and (max-width:1200px) {}
+@media  (min-width: 992px) and (max-width:1200px) {
+    .VenueShowsCard .VenueCardSection .VenueCard .card {
+        min-height: 313px;
+    }
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media  (min-width: 1200px) and (max-width:1400px) {}

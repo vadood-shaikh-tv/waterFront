@@ -27,7 +27,7 @@ export default function Job() {
                     <div className="HiringSec">
                       <span>
                         {" "}
-                        CLICK HERE &gt;&gt; <a href="">HIRING FORM</a>
+                        CLICK HERE &gt;&gt; <a href="https://events.wfconcerts.com/2022hiring">HIRING FORM</a>
                       </span>
                     </div>
 

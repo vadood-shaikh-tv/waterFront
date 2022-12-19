@@ -55,36 +55,44 @@ export default function GuestService() {
                 </div>
                 <div className="row">
                   <div className="col-sm-6">
-                    <div className="boxStyle FaqList">
-                      <a href="">
-                        <img src={AccessibleIcon} alt="" />
-                        <h3>ACCESSIBLE SERVICES</h3>
-                      </a>
-                    </div>
+                    <Link to="/Faq/Accessible">
+                      <div className="boxStyle FaqList">
+                        <a href="">
+                          <img src={AccessibleIcon} alt="" />
+                          <h3>ACCESSIBLE SERVICES</h3>
+                        </a>
+                      </div>
+                    </Link>
                   </div>
                   <div className="col-sm-6">
-                    <div className="boxStyle FaqList">
-                      <a href="">
-                        <img src={ACCOMODATIONICON} alt="" />
-                        <h3>ACCOMODATIONS</h3>
-                      </a>
-                    </div>
+                    <Link to="/Faq/General">
+                      <div className="boxStyle FaqList">
+                        <a href="">
+                          <img src={ACCOMODATIONICON} alt="" />
+                          <h3>ACCOMODATIONS</h3>
+                        </a>
+                      </div>
+                    </Link>
                   </div>
                   <div className="col-sm-6">
-                    <div className="boxStyle FaqList">
-                      <a href="">
-                        <img src={CLEARICON} alt="" />
-                        <h3>CLEAR BAG</h3>
-                      </a>
-                    </div>
+                    <Link to="/Faq/ClearBag">
+                      <div className="boxStyle FaqList">
+                        <a href="">
+                          <img src={CLEARICON} alt="" />
+                          <h3>CLEAR BAG</h3>
+                        </a>
+                      </div>
+                    </Link>
                   </div>
                   <div className="col-sm-6">
-                    <div className="boxStyle FaqList">
-                      <a href="">
-                        <img src={SMAOKEICON} alt="" />
-                        <h3>SMOKE FREE</h3>
-                      </a>
-                    </div>
+                    <Link to="/Faq/Smoking">
+                      <div className="boxStyle FaqList">
+                        <a href="">
+                          <img src={SMAOKEICON} alt="" />
+                          <h3>SMOKE FREE</h3>
+                        </a>
+                      </div>
+                    </Link>
                   </div>
                 </div>
               </div>

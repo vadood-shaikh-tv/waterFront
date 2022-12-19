@@ -18,6 +18,11 @@ import Smoking from "./Components/FAQPage/FAQ-Components/Smoking"
 import Tickets from "./Components/FAQPage/FAQ-Components/Tickets"
 import AccessibleService from "./Components/FAQPage/FAQ-Components/AccessibleService"
 import SecondCard from "./Components/CardSec/SecondCard";
+import Season from "./Components/Tickets/SeasonPage/Season";
+import Hiring from "./Components/Tickets/HiringPage/Hiring";
+import Redeem from "./Components/Tickets/RedeemFlexPage/Redeem";
+import Refund from "./Components/Tickets/RefundPage/Refund";
+import Contact from "./Components/ContactPage/Contact";
 
 
 
@@ -48,6 +53,12 @@ function App() {
           <Route path="Tickets" element={<Tickets />} />
           <Route path="Accessible" element={<AccessibleService />} />
         </Route>
+        <Route path="/Season" element={<Season />} />
+        <Route path="/Hiring" element={<Hiring />} />
+        <Route path="Redeem" element={<Redeem />} />
+        <Route path="Refund" element={<Refund />} />
+        <Route path="Contact" element={<Contact />} />
+
       </Routes>
     </>
   );

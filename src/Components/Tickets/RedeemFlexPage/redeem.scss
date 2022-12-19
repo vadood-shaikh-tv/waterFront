@@ -1,0 +1,26 @@
+.RedeemDetailHead{
+    a{
+        color: #248db8;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    h6 {
+    font-weight: 700;
+    font-size: 18px;
+}
+.ReddemPass{
+    h6{
+        margin: 40px 0;
+    }
+}
+.AvailableMain{
+    margin-top: 40px;
+}
+.AvailableLinks {
+    margin-bottom: 40px;
+    p{
+        color: #4a4a4a;
+    }
+}
+}

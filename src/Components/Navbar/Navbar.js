@@ -1,7 +1,7 @@
 import React from "react";
 import HeaderLogo from "../../Assets/Images/HeaderLogo.png";
 import "../Navbar/navbar.scss";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 // import { Link } from "react-router-dom";
 export default function Navbar() {
   return (
@@ -74,24 +74,37 @@ export default function Navbar() {
                     TICKETS
                   </a>
                   <ul className="dropdown-menu">
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Season Seats
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Flex Pass
-                      </a>
-                    </li>
-
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Redeem Flex Pass
-                      </a>
-                    </li>
+                    <Link to="/Season">
+                      <li>
+                        <a className="dropdown-item" href="#">
+                          Season Seats
+                        </a>
+                      </li>
+                    </Link>
+                    <Link to="/Hiring">
+                      <li>
+                        <a className="dropdown-item" href="#">
+                          Hiring
+                        </a>
+                      </li>
+                    </Link>
+                    <Link to="/Redeem">
+                      <li>
+                        <a className="dropdown-item" href="#">
+                          Redeem Flex Pass
+                        </a>
+                      </li>
+                    </Link>
+                    <Link to="/Refund">
+                      <li>
+                        <a className="dropdown-item" href="#">
+                          Luke Combs Refund Update
+                        </a>
+                      </li>
+                    </Link>
                   </ul>
                 </li>
+
 
                 <li className="nav-item">
                   <a className="nav-link" href="#">

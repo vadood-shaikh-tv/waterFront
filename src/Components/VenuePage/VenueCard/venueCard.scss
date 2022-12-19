@@ -118,6 +118,9 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media (max-width: 768px) {
+    .VenueDetailHead{
+        display: block !important;
+    }
     .VenueCardSection {
         .card {
             height: 319px !important;
@@ -131,13 +134,35 @@
             }
         }
     }
+    .SeatingChartSec{
+        .col-xs-4 {
+            width: 33.33%;
+        }
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media (min-width: 768px) and (max-width:992px) {}
+@media (min-width: 768px) and (max-width:992px) {
+    .CardImage {
+        padding: 30px 10px !important;
+    }
+    .VenueDetailSection .BoxOfficeSection .SeatingChartSec img {
+        width: 55px;
+        object-fit: cover;
+        height: 55px;
+    }
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media (min-width: 992px) and (max-width:1200px) {}
+@media (min-width: 992px) and (max-width:1200px) {
+    .CardImage {
+        padding: 30px 10px !important;
+    }
+    .VenueDetailSection .BoxOfficeSection .SeatingChartSec img {
+        width: 75px;
+        height: 75px;
+    }
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media (min-width: 1200px) and (max-width:1400px) {}

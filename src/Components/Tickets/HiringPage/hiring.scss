@@ -1,0 +1,14 @@
+.HiringLinkSec{
+    .HiringLinkList{
+        margin-top: 40px;
+    strong {
+        color: #4a4a4a;
+    }
+    a {
+        color: #4cb2dc;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+}
