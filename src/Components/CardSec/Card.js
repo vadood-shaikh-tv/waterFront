@@ -6,7 +6,7 @@ import "../CardSec/card.scss";
 export default function Card() {
   return (
     <>
-      <div className="col-md-6">
+      <div className="col-sm-12 col-md-6 col-lg-6">
         <div className="CardSection">
           <div className="XmaxCard">
             <div className=" XmasImage">

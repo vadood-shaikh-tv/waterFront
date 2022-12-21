@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, NavLink, Outlet } from 'react-router-dom';
 import Footer from '../Footer/Footer';
 import Navbar from '../Navbar/Navbar';
 import "./faq.scss";
@@ -30,14 +30,14 @@ export default function Faq() {
                                         <div className='TableContent tabletVeiwHide'>
                                             <h5>Table of Contents</h5>
                                             <div className='TableContestList'>
-                                                <Link to="General">General</Link>
-                                                <Link to="Accessible">Accessible Services</Link>
-                                                <Link to="BoxOffice">Box Office</Link>
-                                                <Link to="ClearBag">Clear Bag Policy</Link>
-                                                <Link to="Smoking">Smoking Policy</Link>
-                                                <Link to="Tickets">Tickets</Link>
-                                                <Link to="Contest">Contest Rules</Link>
-                                                <Link to="PrivacyPolicy">Privacy Policy</Link>
+                                                <NavLink to="General">General</NavLink>
+                                                <NavLink to="Accessible">Accessible Services</NavLink>
+                                                <NavLink to="BoxOffice">Box Office</NavLink>
+                                                <NavLink to="ClearBag">Clear Bag Policy</NavLink>
+                                                <NavLink to="Smoking">Smoking Policy</NavLink>
+                                                <NavLink to="Tickets">Tickets</NavLink>
+                                                <NavLink to="Contest">Contest Rules</NavLink>
+                                                <NavLink to="PrivacyPolicy">Privacy Policy</NavLink>
 
                                             </div>
                                         </div>

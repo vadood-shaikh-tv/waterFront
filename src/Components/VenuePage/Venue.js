@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import VenueCard from "./VenueCard/VenueCard";
 import "./venue.scss";
+import Axios from "../../Service/Insrance";
 
 export default function Venue() {
+  const [item, setItem] = useState([])
+  const [visible, setVisible] = useState(8)
+  const LoadMore = () => {
+    setVisible((Load) => Load + 8)
+  }
+  const APICalling = async () => {
+    const VenueResponse = await Axios.get("venues")
+    setItem(VenueResponse.data.data)
+    // console.log("response", VenueResponse.data.data)
+  }
+  useEffect(() => {
+    APICalling()
+  }, [])
   return (
     <>
       <Navbar />
@@ -21,8 +35,15 @@ export default function Venue() {
               </div>
             </div>
             <div className="row">
-              <VenueCard value={"Vadood"} title={"CROSS INSURANCE CENTER"} image={"https://cdn.pixabay.com/photo/2013/07/13/11/44/penguin-158551__340.png"} />
-              <VenueCard value={"sagar"} title={"CROSS INSURANCE ARENA"} image={"https://cdn.pixabay.com/photo/2013/07/13/11/44/penguin-158551__340.png"} />
+              {item.slice(0, visible).map((item) => {
+                return < VenueCard title={item.title} image={item.featureImage} address={item.address} />
+              })}
+
+            </div>
+            <div className="row">
+              <div className="LoadMoreBtn">
+                <button type="" onClick={LoadMore} className="LoadMore btn-primary">Load More Values</button>
+              </div>
             </div>
           </div>
         </div>

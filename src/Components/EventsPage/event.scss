@@ -1,0 +1,33 @@
+.carousel-indicators [data-bs-target]{
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    margin: 7px;
+    opacity: 1;
+}
+.carousel-indicators .active{
+    background-color: #FF2851;
+}
+.carousel-control-next-icon, .carousel-control-prev-icon{
+    width: 4rem;
+    height: 4rem;
+}
+.carousel-control-prev {
+    background: linear-gradient(to left, #ffffff00 0%, #000000be 100%);
+}
+.carousel-control-next {
+    background: linear-gradient(to left, #000000be 0%, #ffffff00 100%);
+}
+a.carousel-control-prev:hover{
+    opacity: .4;
+}
+a.carousel-control-next:hover {
+    opacity: .4;
+}
+
+.carousel-caption{
+    top: 7rem;
+    right: 15rem;
+    bottom: unset;
+    left: unset;
+}

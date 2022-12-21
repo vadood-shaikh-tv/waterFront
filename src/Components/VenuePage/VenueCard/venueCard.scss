@@ -5,7 +5,7 @@
         .VenueCard {
             .card {
                 border-radius: 0;
-                height: 297px;
+                min-height: 297px;
 
                 .CardImage {
                     margin: auto;
@@ -15,6 +15,9 @@
                         width: 190px;
                         height: 90px;
                     }
+                }
+                .card-body {
+                    min-height: 160px;
                 }
 
                 hr {
@@ -121,6 +124,9 @@
     .VenueDetailHead{
         display: block !important;
     }
+    .VenueShowsCard{
+        margin-bottom: 30px;
+    
     .VenueCardSection {
         .card {
             height: 319px !important;
@@ -134,6 +140,7 @@
             }
         }
     }
+}
     .SeatingChartSec{
         .col-xs-4 {
             width: 33.33%;

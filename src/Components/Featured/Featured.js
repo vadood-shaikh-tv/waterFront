@@ -2,6 +2,7 @@ import Card from "../CardSec/Card";
 import "../Featured/featured.scss";
 import React, { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
+import FeturedCard from "./FeaturedCardPage/FeturedCard";
 
 
 export default function Featured() {
@@ -169,12 +170,15 @@ export default function Featured() {
                   </div>
                 </div>
               </div>
-              <div>
-                <p>
-                  Oops! There are currently no shows available in your city.
-                  Check back soon.
-                </p>
-              </div>
+              <div className="FeaturedCardSec">
+                <div className="row">
+                  <FeturedCard />
+                  <FeturedCard />
+                  <FeturedCard />
+                  <FeturedCard />
+                  <FeturedCard />
+                  <FeturedCard />
+                </div> </div>
             </div>
           </div>
           <div className="row border-BottomClass upcomingShowSec">
@@ -239,6 +243,8 @@ export default function Featured() {
           </div>
           <div className="row">
             <Outlet />
+            <Outlet />
+
             {/* render
             <>
               {isShown && (

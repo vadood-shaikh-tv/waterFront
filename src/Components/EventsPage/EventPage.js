@@ -1,80 +1,69 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../EventsPage/event.scss";
-import bannerImage from "../../Assets/Images/MainBg.jpg";
+// import bannerImage from "../../Assets/Images/MainBg.jpg";
 import Navbar from "../Navbar/Navbar";
 import Featured from "../Featured/Featured";
 import Footer from "../Footer/Footer";
+import axios from 'axios';
+import { useState } from "react";
+import Carousel from 'react-bootstrap/Carousel';
+import CompanyNames from "../CompanyNames/CompanyNames";
+import SkyLineImage from "../../Assets/Images/sky_tunda_bg.png"
+import GreyLineImage from "../../Assets/Images/gray_tunda_bg.png"
+
 
 export default function EventPage() {
+  const [item, setItem] = useState([]);
+
+  useEffect(() => {
+    ApiCalling()
+  }, [])
+
+  const ApiCalling = async () => {
+    const response = await axios.get('https://api.waterfrontconcerts.com/banners')
+    setItem(response.data.data.banners)
+  }
   return (
     <>
       <Navbar />
+
       {/* slider */}
-      <div
-        id="carouselExampleIndicators"
-        className="carousel slide"
-        data-bs-ride="carousel"
-      >
-        <div className="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="0"
-            className="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-        </div>
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img src={bannerImage} className="d-block w-100" alt="..." />
-          </div>
-          <div className="carousel-item">
-            <img src={bannerImage} className="d-block w-100" alt="..." />
-          </div>
-          <div className="carousel-item">
-            <img src={bannerImage} className="d-block w-100" alt="..." />
-          </div>
-        </div>
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="prev"
-        >
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="next"
-        >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Next</span>
-        </button>
-      </div>
+      <Carousel>
+        {item.map((e, index) => {
+          return (
+            <Carousel.Item key={index}>
+              <img
+                className="d-block w-100"
+                src={e.image}
+                alt="First slide"
+              />
+              <Carousel.Caption>
+                <div className="NewShowSec">
+                  <div className="NewShowDetail">
+                    <h3>First slide label</h3>
+                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                  </div>
+                  <div className="GreyImageSec">
+                    <img src={GreyLineImage} alt="" />
+                  </div>
+                  <div className="SkyImageSec">
+                    <img src={SkyLineImage} alt="" />
+
+                  </div>
+                  <div className="NewShowBuy">
+                    <button type="">BUY NOW</button>
+                  </div>
+                </div>
+              </Carousel.Caption>
+            </Carousel.Item>
+          );
+        })}
+      </Carousel>
+
+      <CompanyNames />
       <Featured />
       <Footer />
     </>
   );
 }
+
