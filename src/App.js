@@ -23,6 +23,7 @@ import Hiring from "./Components/Tickets/HiringPage/Hiring";
 import Redeem from "./Components/Tickets/RedeemFlexPage/Redeem";
 import Refund from "./Components/Tickets/RefundPage/Refund";
 import Contact from "./Components/ContactPage/Contact";
+import APICalling from "./Components/APICalling";
 
 
 
@@ -58,6 +59,7 @@ function App() {
         <Route path="Redeem" element={<Redeem />} />
         <Route path="Refund" element={<Refund />} />
         <Route path="Contact" element={<Contact />} />
+        <Route path="APICalling" element={<APICalling />} />
 
       </Routes>
     </>

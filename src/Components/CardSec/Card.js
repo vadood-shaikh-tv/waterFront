@@ -4,6 +4,7 @@ import packageIcon from "../../Assets/Images/ic-packageIcon.png";
 import "../CardSec/card.scss";
 
 export default function Card() {
+
   return (
     <>
       <div className="col-sm-12 col-md-6 col-lg-6">

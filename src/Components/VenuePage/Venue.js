@@ -3,7 +3,7 @@ import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import VenueCard from "./VenueCard/VenueCard";
 import "./venue.scss";
-import Axios from "../../Service/Insrance";
+import Axios from "../../Service/Instance";
 
 export default function Venue() {
   const [item, setItem] = useState([])

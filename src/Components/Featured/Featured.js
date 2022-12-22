@@ -1,26 +1,42 @@
-import Card from "../CardSec/Card";
 import "../Featured/featured.scss";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import FeturedCard from "./FeaturedCardPage/FeturedCard";
+import axios from "axios";
+import APICalling from "../APICalling";
 
 
 export default function Featured() {
-  // const [key, setKey] = useState("home");
+  // FEATURED API 
+  const [value, setValue] = useState([])
+
+  const FeaturedApi = async () => {
+    const getResponse = await axios.get("https://api.waterfrontconcerts.com/events?currentPage=1&eventType=ONSALE&pageSize=4&sortBy=location")
+    // console.log("vadood", getResponse.data.data)
+    setValue(getResponse.data.data)
+  }
+
+  useEffect(() => {
+    FeaturedApi()
+  }, [])
 
 
-  // render
-  const [isShown, setIsShown] = useState(false);
+  // UPCOMING API
+  const [item, setItem] = useState([])
+  const CardApi = async () => {
+    const cardResponse = await axios.get("https://api.waterfrontconcerts.com/events?currentPage=1&eventType=UPCOMING&pageSize=12")
+    // console.log("CardResponse", cardResponse.data.data)
+    setItem(cardResponse.data.data)
 
-  const handleClick = event => {
-    // 👇️ toggle shown state
-    setIsShown(current => !current);
+  }
+  useEffect(() => {
+    CardApi()
+  }, [])
 
-    // 👇️ or simply set it to true
-    // setIsShown(true);
-  };
+
   return (
     <>
+      <APICalling />
       <div className="ShowsSection">
         <div className="container">
           <div className="row">
@@ -172,13 +188,12 @@ export default function Featured() {
               </div>
               <div className="FeaturedCardSec">
                 <div className="row">
-                  <FeturedCard />
-                  <FeturedCard />
-                  <FeturedCard />
-                  <FeturedCard />
-                  <FeturedCard />
-                  <FeturedCard />
-                </div> </div>
+                  {value.map((value) => {
+                    return <FeturedCard title={value.title} image={value.featureImage} date={value.seoDescription} secondTitle={value.seoTitle} thirdTitle={value.subTitle} Price={value.price} />
+                  })}
+
+                </div>
+              </div>
             </div>
           </div>
           <div className="row border-BottomClass upcomingShowSec">
@@ -242,17 +257,9 @@ export default function Featured() {
             </div>
           </div>
           <div className="row">
-            <Outlet />
-            <Outlet />
-
-            {/* render
-            <>
-              {isShown && (
-                <div>
-
-                </div>
-              )} {isShown && <Card />}
-            </> */}
+            {item.map((item) => {
+              return <Outlet title={item.title} subTitle={item.subTitle} />
+            })}
           </div>
         </div>
       </div>

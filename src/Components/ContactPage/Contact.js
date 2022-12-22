@@ -27,29 +27,29 @@ export default function Contact() {
                                     <form>
                                         <div className="NameDiv">
 
-                                            <div class="row">
-                                                <div class="col-sm-6">
-                                                    <label for="formGroupExampleInput" class="form-label">Your Name</label>
+                                            <div className="row">
+                                                <div className="col-sm-6">
+                                                    <label for="formGroupExampleInput" className="form-label">Your Name</label>
 
-                                                    <input type="text" class="form-control" aria-label="First name" />
+                                                    <input type="text" className="form-control" aria-label="First name" />
                                                 </div>
-                                                <div class="col-sm-6">
-                                                    <label for="formGroupExampleInput" class="form-label">Your Email</label>
+                                                <div className="col-sm-6">
+                                                    <label for="formGroupExampleInput" className="form-label">Your Email</label>
 
-                                                    <input type="text" class="form-control" aria-label="Last name" />
+                                                    <input type="text" className="form-control" aria-label="Last name" />
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="mb-4">
-                                            <label for="formGroupExampleInput" class="form-label">Subject</label>
-                                            <input type="text" class="form-control" id="formGroupExampleInput" />
+                                        <div className="mb-4">
+                                            <label for="formGroupExampleInput" className="form-label">Subject</label>
+                                            <input type="text" className="form-control" id="formGroupExampleInput" />
                                         </div>
 
-                                        <div class="mb-4">
-                                            <label for="formGroupExampleInput" class="form-label">Message</label>
-                                            <div class="form-floating">
+                                        <div className="mb-4">
+                                            <label for="formGroupExampleInput" className="form-label">Message</label>
+                                            <div className="form-floating">
 
-                                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                                                <textarea className="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
 
                                             </div>
                                         </div>
@@ -65,8 +65,8 @@ export default function Contact() {
                                     <h3>SOCIAL MEDIA</h3>
                                     <div>
                                         <a href="">
-                                            <i class="fa-brands fa-facebook-f"></i>
-                                            {/* <i class="fa-brands fa-facebook"></i> */}
+                                            <i className="fa-brands fa-facebook-f"></i>
+                                            {/* <i className="fa-brands fa-facebook"></i> */}
                                             Facebook
                                         </a>
                                     </div>

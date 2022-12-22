@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import "./secondCard.scss"
 
-export default function SecondCard() {
+export default function SecondCard({ title }) {
     // const current = new Date();
     // const date = `${current.getDate()}/${current.getMonth() + 1}/${current.getFullYear()}`;
     return (
@@ -17,7 +17,7 @@ export default function SecondCard() {
                 </div>
                 <div className='SecondCardTitle'>
                     <div className='RightDiv'>
-                        <h3>THANK YOU VERY BRUNCH</h3>
+                        <h3>{title}</h3>
                         <p>WITH CHERRY LEMONADE & FRIENDS</p>
                     </div>
                     <div className='LeftDiv'>

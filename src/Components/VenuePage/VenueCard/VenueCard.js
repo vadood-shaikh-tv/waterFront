@@ -1,6 +1,5 @@
 
 import { Link } from "react-router-dom";
-import CrossCenterImage from "../../../Assets/Images/companyImage2.png";
 import "./venueCard.scss";
 
 export default function VenueCard({ title, image, address }) {
