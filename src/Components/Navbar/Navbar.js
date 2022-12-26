@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import HeaderLogo from "../../Assets/Images/HeaderLogo.png";
 import "../Navbar/navbar.scss";
 import { Link, NavLink } from "react-router-dom";
-// import { Link } from "react-router-dom";
+import Axios from "../../Service/Instance";
 export default function Navbar() {
+  const [item, setItem] = useState()
+  const GetApi = async () => {
+    const responsss = await Axios.get("/web/ticket-submenus")
+    // console.log("responsss", responsss.data.data)
+    setItem(responsss.data.data)
+  }
+  useEffect(() => {
+    GetApi()
+  }, [])
+
   return (
     <>
       <div className="NavbarSection">
@@ -34,7 +44,7 @@ export default function Navbar() {
 
                 <NavLink className="nav-bar-link" to="/">
                   <li className="nav-item">
-                    <a className="nav-link" aria-current="page" href="#">
+                    <a className="nav-link active " aria-current="page" href="#">
                       EVENTS
                     </a>
                   </li>
@@ -77,7 +87,7 @@ export default function Navbar() {
                     <Link to="/Season">
                       <li>
                         <a className="dropdown-item" href="#">
-                          Season Seats
+                          {/* {item.title} */}
                         </a>
                       </li>
                     </Link>
@@ -105,12 +115,13 @@ export default function Navbar() {
                   </ul>
                 </li>
 
-
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    WFC STORE
-                  </a>
-                </li>
+                <NavLink to="/https://wfcmerch.com">
+                  <li className="nav-item">
+                    <a className="nav-link" href="#">
+                      WFC STORE
+                    </a>
+                  </li>
+                </NavLink>
                 <NavLink className="nav-bar-link" to="/Faq">
                   <li className="nav-item">
                     <a className="nav-link" href="#">

@@ -1,17 +1,19 @@
 .SecondCardSection {
     margin: 10px 0;
-    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
     padding: 0;
 
 .SecondCardContent {
     display: flex;
     justify-content: space-between;
+    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+    margin-top: 10px;
     .SeconCardDate {
         background-color: #000;
         color: #fff;
         font-weight: 500;
         font-size: 18px;
         text-align: center;
+        width: 46px;
         .date {
             padding: 15px 10px;
         }

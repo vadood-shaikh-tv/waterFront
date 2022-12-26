@@ -14,7 +14,7 @@ export default function Venue() {
   const APICalling = async () => {
     const VenueResponse = await Axios.get("venues")
     setItem(VenueResponse.data.data)
-    // console.log("response", VenueResponse.data.data)
+    // console.log("RESPONSE OF VEBUE DATA", VenueResponse.data.data)
   }
   useEffect(() => {
     APICalling()
@@ -36,7 +36,7 @@ export default function Venue() {
             </div>
             <div className="row">
               {item.slice(0, visible).map((item) => {
-                return < VenueCard title={item.title} image={item.featureImage} address={item.address} />
+                return < VenueCard title={item.title} image={item.featureImage} address={item.address} id={item._id} />
               })}
 
             </div>

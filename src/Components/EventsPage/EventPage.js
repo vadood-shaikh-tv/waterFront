@@ -4,13 +4,13 @@ import "../EventsPage/event.scss";
 import Navbar from "../Navbar/Navbar";
 import Featured from "../Featured/Featured";
 import Footer from "../Footer/Footer";
-import axios from 'axios';
 import { useState } from "react";
 import Carousel from 'react-bootstrap/Carousel';
 import CompanyNames from "../CompanyNames/CompanyNames";
 import SkyLineImage from "../../Assets/Images/sky_tunda_bg.png"
 import GreyLineImage from "../../Assets/Images/gray_tunda_bg.png"
 import PinkCut from "../../Assets/Images/pink_cut-Image.png"
+import Axios from "../../Service/Instance";
 
 
 export default function EventPage() {
@@ -22,7 +22,7 @@ export default function EventPage() {
   }, [])
 
   const ApiCalling = async () => {
-    const response = await axios.get('https://api.waterfrontconcerts.com/banners')
+    const response = await Axios.get('/banners')
     setItem(response.data.data.banners)
 
   }

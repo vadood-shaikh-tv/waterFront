@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Axios from "../../Service/Instance";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import "./job.scss";
 
 export default function Job() {
+  // const [item, setitem] = useState()
+  // const GetApi = async () => {
+  //   const responsss = await Axios.get("/web/ticket-submenu?slug=jobs")
+  //   setitem(responsss.data.data)
+  //   console.log("responsss", responsss.data.data)
+  // }
+  // useEffect(() => {
+  //   GetApi()
+  // }, [])
+
   return (
     <>
       <Navbar />
@@ -17,6 +28,7 @@ export default function Job() {
                     <h1>JOBS</h1>
                   </div>
                   <div className="JobDetailSec boxStyle">
+
                     <h5>
                       Looking to work for Waterfront Concerts / Production
                       Services of Maine this summer?

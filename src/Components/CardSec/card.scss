@@ -1,3 +1,6 @@
+.CardSection {
+    margin-bottom: 35px;
+}
 .XmaxCard {
     display: flex;
     border: 1px solid #E9E8E8;
@@ -110,6 +113,7 @@
         }
     }
 }
+
 /* Extra small devices (phones, 600px and down) */
 @media  (max-width: 768px) {
     .XmaxCard {

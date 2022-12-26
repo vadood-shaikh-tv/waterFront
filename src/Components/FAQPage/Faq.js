@@ -30,7 +30,7 @@ export default function Faq() {
                                         <div className='TableContent tabletVeiwHide'>
                                             <h5>Table of Contents</h5>
                                             <div className='TableContestList'>
-                                                <NavLink to="General">General</NavLink>
+                                                <NavLink to="General" aria-current="page">General</NavLink>
                                                 <NavLink to="Accessible">Accessible Services</NavLink>
                                                 <NavLink to="BoxOffice">Box Office</NavLink>
                                                 <NavLink to="ClearBag">Clear Bag Policy</NavLink>

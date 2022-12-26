@@ -2,8 +2,8 @@ import "../Featured/featured.scss";
 import React, { useEffect, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import FeturedCard from "./FeaturedCardPage/FeturedCard";
-import axios from "axios";
 import APICalling from "../APICalling";
+import Axios from "../../Service/Instance";
 
 
 export default function Featured() {
@@ -11,7 +11,7 @@ export default function Featured() {
   const [value, setValue] = useState([])
 
   const FeaturedApi = async () => {
-    const getResponse = await axios.get("https://api.waterfrontconcerts.com/events?currentPage=1&eventType=ONSALE&pageSize=4&sortBy=location")
+    const getResponse = await Axios.get("/events?currentPage=1&eventType=ONSALE&pageSize=4&sortBy=location")
     // console.log("vadood", getResponse.data.data)
     setValue(getResponse.data.data)
   }
@@ -21,22 +21,10 @@ export default function Featured() {
   }, [])
 
 
-  // UPCOMING API
-  const [item, setItem] = useState([])
-  const CardApi = async () => {
-    const cardResponse = await axios.get("https://api.waterfrontconcerts.com/events?currentPage=1&eventType=UPCOMING&pageSize=12")
-    // console.log("CardResponse", cardResponse.data.data)
-    setItem(cardResponse.data.data)
-
-  }
-  useEffect(() => {
-    CardApi()
-  }, [])
-
 
   return (
     <>
-      <APICalling />
+      {/* <APICalling /> */}
       <div className="ShowsSection">
         <div className="container">
           <div className="row">
@@ -257,9 +245,9 @@ export default function Featured() {
             </div>
           </div>
           <div className="row">
-            {item.map((item) => {
-              return <Outlet title={item.title} subTitle={item.subTitle} />
-            })}
+
+            <Outlet />
+
           </div>
         </div>
       </div>

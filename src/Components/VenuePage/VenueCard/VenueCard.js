@@ -1,9 +1,17 @@
-
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./venueCard.scss";
 
-export default function VenueCard({ title, image, address }) {
+export default function VenueCard({ title, image, address, id }) {
 
+  const navigate = useNavigate()
+
+  const onNavigate = (id) => {
+    navigate(`/VenueCardDetails`, { state: id })
+  }
+
+
+  // Venue chlid API
+  //api.waterfrontconcerts.com/events?currentPage=1&pageSize=12&venueId=5e2eea0d1700cb32758e0b98
   return (
     <>
       <div className="col-sm-6 col-md-4 col-lg-3">
@@ -26,11 +34,9 @@ export default function VenueCard({ title, image, address }) {
                   </div>
                 </div>
                 <div className="card-footer">
-                  <Link to="/VenueCardDetails">
-                    <a className="btn btn-primary MoreInfoBtn">
-                      MORE INFO
-                    </a>
-                  </Link>
+                  <a className="btn btn-primary MoreInfoBtn" onClick={() => onNavigate(id)}>
+                    MORE INFO
+                  </a>
                 </div>
               </div>
 

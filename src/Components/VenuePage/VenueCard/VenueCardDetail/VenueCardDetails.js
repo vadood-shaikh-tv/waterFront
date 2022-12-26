@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "../../../Footer/Footer";
 import Navbar from "../../../Navbar/Navbar";
 // import VenueCompanyImg from "../../../../Assets/Images/companyImage2.png";
@@ -9,10 +9,34 @@ import SeatingChartImgFour from "../../../../Assets/Images/SeatingImage4.jpg";
 import SeatingChartImgFive from "../../../../Assets/Images/SeatingImage5.jpg";
 import SeatingChartImgSix from "../../../../Assets/Images/SeatingImage6.jpg";
 import "../venueCard.scss"
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import Axios from "../../../../Service/Instance";
 
 
 export default function VenueCardDetails() {
+
+    const location = useLocation()
+    // const [data, setData] = useState([])
+
+
+
+    const APICalling = async () => {
+
+        const VenueResponse = await Axios.get(`events?currentPage=1&pageSize=12&venueId=${location.state}`);
+        // console.log("RESPONSE OF EVENT API", VenueResponse.data.data)
+
+        VenueResponse.data.data.map((e) => {
+            console.log(">>>", e)
+
+        })
+        // https://api.waterfrontconcerts.com/venue
+
+    }
+
+    useEffect(() => {
+        APICalling()
+        // console.log(">>>>", location.state)
+    }, [])
     return (
         <>
             <Navbar />
@@ -23,7 +47,7 @@ export default function VenueCardDetails() {
                             <div className="col-md-12">
                                 <div className="VenueDetailHead border-BottomClass">
                                     <div className="VenueDetailHeading">
-                                        <h1>CROSS INSURANCE EVENT</h1>
+                                        <h1>MAINE SAVINGS AMPHITHEATER</h1>
                                     </div>
                                     <div className="BackToVenueSec">
                                         <Link to="/Venue">
