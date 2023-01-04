@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import AccessibleIcon from "../../Assets/Images/guestIcon1.png";
 import ACCOMODATIONICON from "../../Assets/Images/guestIcon2.png";
@@ -19,6 +19,7 @@ export default function GuestService() {
             <div className="col-md-12">
               <div className="GuestHeading border-BottomClass">
                 <h1>Guest Heading</h1>
+
               </div>
             </div>
           </div>
@@ -32,12 +33,20 @@ export default function GuestService() {
                   <div className="SearchSec">
                     <div className="input-group SetPosition">
                       <div className="form-outline ">
-                        <input
-                          type="search"
-                          id="form1"
-                          className="form-control "
-                          placeholder="Choose FAQ"
-                        />
+
+                        <select className="form-select" aria-label="Default select example" placeholder="Choose FAQ">
+                          <option value="1">Choose FAQ</option>
+                          <option value="2">General</option>
+                          <option value="3">Accessible</option>
+                          <option value="4">Box Office</option>
+                          <option value="5">Clear Bag Policy</option>
+                          <NavLink to="Faq/General">
+                            <option value="6">Smoking Policy</option>
+                          </NavLink>
+                          <option value="7">Tickets</option>
+                          <option value="8">Contest Rules</option>
+                          <option value="9">Privacy Policy</option>
+                        </select>
                       </div>
                       <i className="fas fa-search searchIconSet"></i>
                       <button type="button" className="SeacrhFaqbtn ">
@@ -46,7 +55,7 @@ export default function GuestService() {
                     </div>
                   </div>
                   <div className=" GoFaqPageBtn">
-                    <Link to="/Faq">
+                    <Link to="/Faq/General">
                       <button type="" className="btn-primary GoFaqBtn">
                         GO TO FAQ PAGE
                       </button>

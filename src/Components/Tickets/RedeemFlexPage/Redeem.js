@@ -1,9 +1,25 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
+import { Await } from 'react-router-dom'
+import Axios from '../../../Service/Instance'
 import Footer from '../../Footer/Footer'
 import Navbar from '../../Navbar/Navbar'
 import "./redeem.scss"
 
 export default function Redeem() {
+    const [redeem, setRedeem] = useState()
+    const redeemApi = async () => {
+        const RedeemApiResponse = await Axios.get("https://api.waterfrontconcerts.com/web/ticket-submenu?slug=redeem-flex-pass")
+        // console.log(RedeemApiResponse.data.data)
+        setRedeem(RedeemApiResponse.data.data)
+    }
+    useEffect(() => {
+        redeemApi()
+    }, [])
+    const parse = require('html-react-parser');
+
+
+    // https://api.waterfrontconcerts.com/web/ticket-submenu?slug=redeem-flex-pass
     return (<>
         <Navbar />
         <div className='MainCommon'>
@@ -13,7 +29,7 @@ export default function Redeem() {
                         <div className='col-md-12'>
                             <div className='SeasonHead border-BottomClass'>
                                 <div className='SeasonHeading'>
-                                    <h1>REDEEM FLEX PASS</h1>
+                                    <h1>{redeem ? redeem.title : ""}</h1>
                                 </div>
                             </div>
                         </div>
@@ -22,11 +38,11 @@ export default function Redeem() {
                         <div className='col-md-12'>
                             <div className='SeasonTicketDetails boxStyle'>
                                 <div className='RedeemDetailHead'>
-                                    <div className='SeasonDetailHeading'>
-                                        <h1>2022 Flex Pass Redemption</h1>
 
+                                    <div className='ContentTestst'>
+                                        {redeem ? parse(redeem.content) : ""}
                                     </div>
-                                    <div className='SeasonPara'>
+                                    {/* <div className='SeasonPara'>
                                         <h6> Redemption for Flex Passes is now OPEN.</h6>
                                         <h6>NOTE :: Requests will be filled first come first serve. </h6>
 
@@ -71,8 +87,8 @@ export default function Redeem() {
                                     </div>
                                     <div className='AvailableLinks'>
                                         <p><b>NEED ADDITIONAL HELP?</b></p>
-                                        <p>Email us at flexpass@waterfrontconcerts.com</p>                                    </div>
-
+                                        <p>Email us at flexpass@waterfrontconcerts.com</p>                                    
+                                    </div> */}
                                 </div>
                             </div>
                         </div>

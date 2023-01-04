@@ -13,6 +13,14 @@
 a.active{
     color: #FF2851;
 }}
+.TableContestList{
+margin: 30px 0;
+    p {
+    font-size: 13px;
+    color: #000;
+    font-weight: bold;
+    font-family: lato;
+}}
 .accordion-item {
     border: 0;
     border-top: 1px solid#DDDDDD !important;
@@ -65,6 +73,7 @@ a.active{
     }
 }
 
+
 /* Extra small devices (phones, 600px and down) */
 @media  (max-width: 768px) {
     .tabletVeiwHide{
@@ -82,10 +91,10 @@ a.active{
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media  (min-width: 768px) and (max-width:992px){
     .tabletVeiwHide{
-        display: none;
+        display: block;
     }
     .WebViewHide{
-        display: block;
+        display: none;
     }
 }
 

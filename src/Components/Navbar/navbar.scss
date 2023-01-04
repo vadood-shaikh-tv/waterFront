@@ -1,11 +1,18 @@
 $color-red: #FF2851;
 $color-white: #ffffff;
 .NavbarSection {
+    a.nav-bar-link li >a:after{
+        content: " ";
+        height: 3px;
+        width: 100%;
+        background-color: transperent ;
+        display: block;
+    }
     a.nav-bar-link >li:hover >a:after {
         content: " ";
         height: 3px;
         width: 100%;
-        background-color: #FF2851;
+        background-color: $color-red;
         display: block;
     }
     
@@ -13,9 +20,21 @@ $color-white: #ffffff;
         content: " ";
         height: 3px;
         width: 100%;
-        background-color: #FF2851;
+        background-color: $color-red ;
         display: block;
     }
+
+    // li.nav-item.dropdown{.show::after {
+    //     content: " ";
+    //     height: 3px;
+    //     width: 100%;
+    //     background-color: #FF2851;
+    //     display: block;
+    //     border-top: 0 solid; 
+    //     border-right: 0 solid ; 
+    //     border-bottom: 0; 
+    //     border-left: 0 solid ;
+    // }}
     nav.navbar {
         background-color: #000;
         ul.navbar-nav {
@@ -98,7 +117,26 @@ $color-white: #ffffff;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media  (min-width: 768px) and (max-width:992px){}
+@media  (min-width: 768px) and (max-width:992px){
+    button.navbar-toggler{
+        transform: rotate(90deg);
+        width: 64px;
+    }
+    span.icon-bar {
+        background-color: white;
+        padding: 1px;
+        margin: 4px;
+    }
+    span.navbar-toggler-icon {
+        position: relative;
+        z-index: -1;
+        top: -4px;
+        left: -28px;
+    }
+    .extraHide {
+        display: none;
+    }
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media  (min-width: 992px) and (max-width:1200px) {}

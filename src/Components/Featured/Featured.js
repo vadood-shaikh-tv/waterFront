@@ -4,6 +4,7 @@ import { Link, Outlet } from "react-router-dom";
 import FeturedCard from "./FeaturedCardPage/FeturedCard";
 import APICalling from "../APICalling";
 import Axios from "../../Service/Instance";
+import GridIcon from "../../Assets/Images/listgrid.png"
 
 
 export default function Featured() {
@@ -20,6 +21,13 @@ export default function Featured() {
     FeaturedApi()
   }, [])
 
+  const [isActive, setIsActive] = useState(false);
+  const [isActiveSecond, setIsActiveSecond] = useState(false);
+
+  const handleClick = event => {
+    // 👇️ toggle isActive state on click
+    setIsActive(current => !current);
+  };
 
 
   return (
@@ -224,17 +232,13 @@ export default function Featured() {
                     </div>
                     <div className="GridIcon">
                       <Link to="Card" >
-                        <span className="gridIcon" >
-                          <i
-                            className="fa-sharp fa-solid fa-list"
-                            eventkey="home"
-                            title="Home"
-                          ></i>
+                        <span className={isActive ? 'LightGridIcon1' : 'gridicon1'} onClick={handleClick}>
+
                         </span>
                       </Link>
                       <Link to="SecondCard">
-                        <span className="gridIcon">
-                          <i className="fa-sharp fa-solid fa-list"></i>
+                        <span className={isActive ? 'LightGridIcon2' : 'gridicon2'} onClick={handleClick}>
+
                         </span>
                       </Link>
                     </div>

@@ -8,9 +8,12 @@ import Axios from "../../Service/Instance";
 export default function Venue() {
   const [item, setItem] = useState([])
   const [visible, setVisible] = useState(8)
+
   const LoadMore = () => {
     setVisible((Load) => Load + 8)
   }
+
+
   const APICalling = async () => {
     const VenueResponse = await Axios.get("venues")
     setItem(VenueResponse.data.data)

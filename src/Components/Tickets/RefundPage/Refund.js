@@ -1,10 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Footer from '../../Footer/Footer'
 import Navbar from '../../Navbar/Navbar'
 import "./refund.scss"
 import LukeRefundImage from "../../../Assets/Images/LukeRefundImage.jpg"
+import Axios from '../../../Service/Instance'
 
 export default function Refund() {
+    // https://api.waterfrontconcerts.com/web/ticket-submenu?slug=luke-combs-refund-update
+    const [refund, setRefund] = useState()
+    const refundApi = async () => {
+        const RefundApiResponse = await Axios.get("https://api.waterfrontconcerts.com/web/ticket-submenu?slug=luke-combs-refund-update");
+        console.log(RefundApiResponse)
+        setRefund(RefundApiResponse.data.data)
+    }
+    useEffect(() => {
+        refundApi()
+    }, [])
+    const parse = require('html-react-parser');
     return (<>
         <Navbar />
         <div className='MainCommon'>
@@ -15,7 +27,7 @@ export default function Refund() {
                             <div className='col-md-12'>
                                 <div className='SeasonHead border-BottomClass'>
                                     <div className='SeasonHeading'>
-                                        <h1>LUKE COMBS REFUND UPDATE</h1>
+                                        <h1>{refund ? refund.title : ""}</h1>
                                     </div>
                                 </div>
                             </div>
@@ -24,15 +36,8 @@ export default function Refund() {
                             <div className='col-md-12'>
                                 <div className='SeasonTicketDetails boxStyle'>
                                     <div className='RefundDetailHead'>
-                                        <div className='SeasonDetailHeading'>
-                                            <h3>Luke Combs Refund Update</h3>
-                                            <p> <b> <i> Hey all, </i></b></p>
-                                            <p> <b> <i>If you attended the Luke Combs concert on Saturday, September 3rd, we have finally worked through all the refunds with Ticketmaster. Be on the lookout in the coming days for your full refund for his gutty performance. Remember some banks will take a bit longer than normal but on average, this takes 3-5 business days for refunds to route and post completely. We can’t wait to welcome you all back to the Maine Savings Amphitheater in 2023.  </i></b></p>
-                                            <p> <b> <i>Announcements are coming soon.</i></b></p>
-                                        </div>
-                                        <div className='RefundImage'>
-                                            <img src={LukeRefundImage} alt="" />
-                                        </div>
+                                        {refund ? parse(refund.content) : ""}
+
                                     </div>
                                 </div>
                             </div>

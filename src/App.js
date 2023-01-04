@@ -24,44 +24,49 @@ import Redeem from "./Components/Tickets/RedeemFlexPage/Redeem";
 import Refund from "./Components/Tickets/RefundPage/Refund";
 import Contact from "./Components/ContactPage/Contact";
 import APICalling from "./Components/APICalling";
+import Footer from "./Components/Footer/Footer";
 
 
 
 function App() {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<EventPage />} >
-          <Route path="Card" element={<Card />} />
-          <Route path="SecondCard" element={<SecondCard />} />
-        </Route>
-        <Route path="/Featured" element={<Featured />} />
+      <div className="MAIN">
 
 
-        {/* <Route path="/Card" element={<Card />} /> */}
-        <Route path="/Darlings" element={<Darlings />} />
-        <Route path="Venue" element={<Venue />} />
-        <Route path="/VenueCardDetails" element={<VenueCardDetails />} />
-        <Route path="/Job" element={<Job />} />
-        <Route path="/GuestService" element={<GuestService />} />
-        <Route path="/Faq" element={<Faq />} >
-          <Route path="General" element={<General />} />
-          <Route path="BoxOffice" element={<BoxOffice />} />
-          <Route path="ClearBag" element={<ClearBag />} />
-          <Route path="Contest" element={<Contest />} />
-          <Route path="PrivacyPolicy" element={<PrivacyPolicy />} />
-          <Route path="Smoking" element={<Smoking />} />
-          <Route path="Tickets" element={<Tickets />} />
-          <Route path="Accessible" element={<AccessibleService />} />
-        </Route>
-        <Route path="/Season" element={<Season />} />
-        <Route path="/Hiring" element={<Hiring />} />
-        <Route path="Redeem" element={<Redeem />} />
+        <Routes>
+          <Route path="/" element={<EventPage />} >
+            <Route path="Card" element={<Card />} />
+            <Route path="SecondCard" element={<SecondCard />} />
+          </Route>
+          <Route path="/Featured" element={<Featured />} />
+
+          {/* <Route path="/Card" element={<Card />} /> */}
+          <Route path="/Darlings" element={<Darlings />} />
+          <Route path="/Venue" element={<Venue />} />
+          <Route path="Venue/VenueCardDetails" element={<VenueCardDetails />} />
+          <Route path="/Job" element={<Job />} />
+          <Route path="/GuestService" element={<GuestService />} />
+          <Route path="/Faq" element={<Faq />} >
+            <Route path="General" element={<General />} />
+            <Route path="BoxOffice" element={<BoxOffice />} />
+            <Route path="ClearBag" element={<ClearBag />} />
+            <Route path="Contest" element={<Contest />} />
+            <Route path="PrivacyPolicy" element={<PrivacyPolicy />} />
+            <Route path="Smoking" element={<Smoking />} />
+            <Route path="Tickets" element={<Tickets />} />
+            <Route path="Accessible" element={<AccessibleService />} />
+          </Route>
+          <Route path="/Season/:slug" element={<Season />} />
+          {/* <Route path="/Hiring" element={<Hiring />} /> */}
+          {/*<Route path="Redeem" element={<Redeem />} />
         <Route path="Refund" element={<Refund />} />
-        <Route path="Contact" element={<Contact />} />
-        <Route path="APICalling" element={<APICalling />} />
+        <Route path="Contact" element={<Contact />} /> */}
+          <Route path="APICalling" element={<APICalling />} />
 
-      </Routes>
+        </Routes>
+
+      </div>
     </>
   );
 }

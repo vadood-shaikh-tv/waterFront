@@ -1,11 +1,14 @@
 .companySec {
     background-color: #fff;
+    width: -webkit-fill-available;
+    display: flex;
 
     .companys {
         padding: 20px 15px;
-
+        display: flex;
+        width: -webkit-fill-available;
         img.companyIcon {
-            width: 100%;
+            width: -webkit-fill-available;
             filter: grayscale(100%);
             webkit-filter: grayscale(100%);
         }
@@ -13,6 +16,7 @@
         img.companyIcon:hover {
             filter: grayscale(0%);
         }
+    
     }
 }
 

@@ -4,14 +4,15 @@ import "../Navbar/navbar.scss";
 import { Link, NavLink } from "react-router-dom";
 import Axios from "../../Service/Instance";
 export default function Navbar() {
-  const [item, setItem] = useState()
-  const GetApi = async () => {
-    const responsss = await Axios.get("/web/ticket-submenus")
-    // console.log("responsss", responsss.data.data)
-    setItem(responsss.data.data)
+  const [subMenuData, setSubMenuData] = useState([])
+
+  const ticketSubMenu = async () => {
+    const response = await Axios.get('/web/ticket-submenus')
+    setSubMenuData(response.data.data)
+    // console.log(response.data.data)
   }
   useEffect(() => {
-    GetApi()
+    ticketSubMenu()
   }, [])
 
   return (
@@ -19,7 +20,7 @@ export default function Navbar() {
       <div className="NavbarSection">
         <nav className="navbar navbar-expand-lg ">
           <div className="container">
-            <a className="navbar-brand" href="#">
+            <a className="navbar-brand" href="/">
               <img className="HeaderLogoIcon" src={HeaderLogo} alt="" />
             </a>
             <button
@@ -72,6 +73,7 @@ export default function Navbar() {
                     </a>
                   </li>
                 </NavLink>
+
                 <li className="nav-item dropdown" >
                   <a
                     className="nav-link dropdown-toggle"
@@ -84,34 +86,17 @@ export default function Navbar() {
                     TICKETS
                   </a>
                   <ul className="dropdown-menu">
-                    <Link to="/Season">
-                      <li>
-                        <a className="dropdown-item" href="#">
-                          {/* {item.title} */}
-                        </a>
-                      </li>
-                    </Link>
-                    <Link to="/Hiring">
-                      <li>
-                        <a className="dropdown-item" href="#">
-                          Hiring
-                        </a>
-                      </li>
-                    </Link>
-                    <Link to="/Redeem">
-                      <li>
-                        <a className="dropdown-item" href="#">
-                          Redeem Flex Pass
-                        </a>
-                      </li>
-                    </Link>
-                    <Link to="/Refund">
-                      <li>
-                        <a className="dropdown-item" href="#">
-                          Luke Combs Refund Update
-                        </a>
-                      </li>
-                    </Link>
+                    {
+                      subMenuData ? subMenuData.map((menu) => {
+                        return <Link to={`/Season/${menu.slug}`} >
+                          <li>
+                            <a className="dropdown-item">
+                              {menu.title}
+                            </a>
+                          </li>
+                        </Link>
+                      }) : "loading..!!"
+                    }
                   </ul>
                 </li>
 
@@ -131,34 +116,31 @@ export default function Navbar() {
                 </NavLink>
               </ul>
             </div>
-            <div className="SocialIcons mobileViewHide">
-              <a href="">
+            <div className="SocialIcons mobileViewHide extraHide">
+              <a href="https://www.facebook.com/wfconcertsME">
                 <i className="fa-brands fa-facebook"></i>
               </a>
-              <a href="">
+              <a href="https://twitter.com/wfconcerts">
                 {" "}
                 <i className="fa-brands fa-twitter"></i>
               </a>
-              <a href="">
+              <a href="https://www.youtube.com/user/wfconcerts">
                 {" "}
                 <i className="fa-brands fa-youtube"></i>
               </a>
-              <a href="">
+              <a href="https://www.instagram.com/wfconcerts/">
                 {" "}
                 <i className="fa-brands fa-instagram"></i>
               </a>
-              <a href="">
+              <a href="https://www.snapchat.com/wfconcerts">
                 {" "}
                 <i className="fa-brands fa-snapchat"></i>
               </a>
             </div>
           </div>
-        </nav>
+        </nav >
       </div >
-      {/* <EventPage />
-      <CompanyNames />
-      <Featured />
-      <Footer /> */}
+
     </>
   );
 }

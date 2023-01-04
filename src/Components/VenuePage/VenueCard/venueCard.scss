@@ -85,6 +85,7 @@
         p {
             color: #4a4a4a;
             font-size: 12px;
+    font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
 
         li {
@@ -102,18 +103,27 @@
                 width: 100%;
                 margin-bottom: 30px;
                 padding: 10px 60px;
+                object-fit: scale-down;
             }
         }
     }
     .BoxOfficeSection{
+        .PaymentHead p{
+
+            display: inline-block;
+            padding: 3px;
+        }
         p {
             font-size: 12px;
+            font-size: 12px;
+            font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
    .SeatingChartSec{
         img {
             width: 90px;
             object-fit: cover;
             height: 90px;
+            margin: 10px;
         }
     }
 }

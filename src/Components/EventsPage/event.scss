@@ -139,6 +139,28 @@ a.carousel-control-next:hover {
 }
 
 /* Extra small devices (phones, 600px and down) */
+@media (min-width:320px) and (max-width: 450px) {
+    .Slider {
+         .carousel-item{
+          .carousel-caption{
+                width: 100%;
+                right: 0rem !important;
+                .GreyImageSec{
+                    margin: -4px 0;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .SkyImageSec{
+                    margin: -2px 0;
+                    img{
+                        width: 100%;
+                    }
+                }
+          }
+    }
+}
+}
 @media (max-width: 768px) {
     .Slider {
         .carousel-item {
@@ -150,7 +172,7 @@ a.carousel-control-next:hover {
 
             .carousel-caption {
                 top: 1rem;
-                right: 5rem;
+                right: 1rem;
                 bottom: unset;
                 left: unset;
             }

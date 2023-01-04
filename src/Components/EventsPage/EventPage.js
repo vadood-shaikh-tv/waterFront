@@ -16,16 +16,24 @@ import Axios from "../../Service/Instance";
 export default function EventPage() {
   // Slider API
   const [item, setItem] = useState([]);
+  const [venueData, setVenueData] = useState([])
 
-  useEffect(() => {
-    ApiCalling()
-  }, [])
+
 
   const ApiCalling = async () => {
     const response = await Axios.get('/banners')
     setItem(response.data.data.banners)
-
   }
+  const VenueApiCall = async () => {
+    const ResponseVenueApi = await Axios.get("venues")
+    console.log(ResponseVenueApi.data.data)
+    setVenueData(ResponseVenueApi.data.data)
+  }
+  useEffect(() => {
+    ApiCalling()
+    VenueApiCall()
+  }, [])
+
 
   return (
     <>
@@ -90,8 +98,18 @@ export default function EventPage() {
           })}
         </Carousel>
       </div>
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-2">
+            <div className="companySec mobileViewHide">
+              {venueData.slice(0, 6).map((venueData) => {
 
-      <CompanyNames />
+                return <CompanyNames img={venueData.featureImage} id={venueData._id} />
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
       <Featured />
       <Footer />
     </>

@@ -48,6 +48,14 @@
 
                     .form-outline {
                         width: calc(100% - 210px);
+                        select.form-select {
+                            padding: 9px 40px;
+                            box-shadow: none;
+                            border-radius: 0;
+                            &:focus{
+                                border: 1px solid #ced4da;
+                            }
+                        }
                     }
 
                     button.SeacrhFaqbtn {

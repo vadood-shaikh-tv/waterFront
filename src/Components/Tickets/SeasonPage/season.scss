@@ -2,55 +2,33 @@
     .SeasonTicketDetails {
         margin-top: 30px;
         padding: 30px 50px;
-
-        .SeasonDetailHead {
-            .SeasonDetailHeading {
-                text-align: center;
-
-                .SeasonImageSec {
-                    img {
-                        width: 100%;
-                        object-fit: cover;
-                    }
-                }
-            }
-
-            .SeasonPara {
-                margin-top: 7px;
-
-                p {
-                    margin-bottom: 4px;
-                }
-            }
+        a{
+            color: #4cb2dc;
         }
-
-        .AvailablePackageSec {
-
-            h2 {
-                font-size: 31px;
-                font-weight: bold;
-                color: #000;
-                margin: 40px 0;
-            }
-
-            h3 {
-                font-weight: bold;
-                color: #000;
-                margin-bottom: 11px;
-            }
-
-            .AvailableDetail {
-                margin-top: 60px;
-
-                p {
-                    color: #4a4a4a;
-                }
-
-                strong {
-                    color: #4a4a4a;
-                }
-
-            }
+  
+        h5{
+            text-align: start !important;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        h2 {
+            font-size: 31px;
+            font-weight: bold;
+            color: #000;
+            margin: 20px 0;
+        }
+        h3 {
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 5px;
+        }
+        p {
+            color: #4a4a4a;
+        }
+        h4 {
+         font-weight: bold;
+         font-size: 14px;
+        }
 
             h2.ReduceMarginBottom {
                 margin-bottom: 25px !important;
@@ -61,31 +39,29 @@
             }
         }
 
-        .SeasonFooter {
-            text-align: center;
-            margin-top: 70px;
-            margin-bottom: 30px;
-            color: #000;
-        }
+       
     }
-}
+
 
 /* Extra small devices (phones, 600px and down) */
 @media (max-width: 768px) {
     .SeasonTicketsSection {
         .SeasonTicketDetails {
+            img{
+                width: 100%;
+            }
             margin-top: 20px;
 
             .SeasonImageSec img {
                 margin-bottom: 0;
             }
 
-            .AvailablePackageSec {
+           
                 h2 {
                     margin: 30px 0;
                 }
 
-                .AvailableDetail {
+               
                     margin-top: 40px;
 
                     p {
@@ -99,11 +75,23 @@
                 margin-bottom: 20px;
             }
         }
+    
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media (min-width: 768px) and (max-width:992px) {
+    .SeasonTicketDetails {
+        img{
+            width: 100%;
+        }
     }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media (min-width: 768px) and (max-width:992px) {}
+@media  (min-width: 900px) and (max-width:1025px){
+    .hiring {
+        margin-bottom: 8rem;
+    }
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media (min-width: 992px) and (max-width:1200px) {}

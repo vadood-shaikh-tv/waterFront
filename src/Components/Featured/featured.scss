@@ -64,6 +64,47 @@
       .form-select:focus{
         box-shadow: none;
       }
+      .gridicon1{
+        background-image: url(../../Assets/Images/listgrid.png);
+        margin-left: 20px;
+        cursor: pointer;
+        margin-top: -5px;
+        width: 24px;
+        height: 20px;
+        display: inline-block;
+        background-position: 0px 0;
+      }
+      .LightGridIcon1{
+        background-image: url(../../Assets/Images/listgrid.png);
+        margin-left: 20px;
+        cursor: pointer;
+        margin-top: -5px;
+        width: 24px;
+        height: 20px;
+        display: inline-block;
+        background-position: 0px 20px;
+      }
+      .gridicon2{
+        background-image: url(../../Assets/Images/listgrid.png);
+        margin-left: 20px;
+        cursor: pointer;
+        margin-top: -5px;
+        width: 24px;
+        height: 20px;
+        display: inline-block;
+        background-position: 24px 0;
+      }
+      .LightGridIcon2{
+        background-image: url(../../Assets/Images/listgrid.png);
+        margin-left: 20px;
+        cursor: pointer;
+        margin-top: -5px;
+        width: 24px;
+        height: 20px;
+        display: inline-block;
+        background-position: 24px 20px;
+      }
+      
     }
   }
 
@@ -147,6 +188,7 @@
           position: absolute;
           top: 5px;
           right: 0;
+        
         }
       }
     }

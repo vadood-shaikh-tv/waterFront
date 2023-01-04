@@ -5,10 +5,12 @@ export default function VenueCard({ title, image, address, id }) {
 
   const navigate = useNavigate()
 
+  // const onNavigate = (id) => {
+  //   navigate(`/Venue/VenueCardDetails`, { state: id })
+  // }
   const onNavigate = (id) => {
-    navigate(`/VenueCardDetails`, { state: id })
+    navigate(`/Venue/VenueCardDetails`, { state: id })
   }
-
 
   // Venue chlid API
   //api.waterfrontconcerts.com/events?currentPage=1&pageSize=12&venueId=5e2eea0d1700cb32758e0b98

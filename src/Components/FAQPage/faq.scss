@@ -13,11 +13,22 @@
     }
 }
 .FaqTableSection {
-    margin: 20px 0;
+    margin: 35px 0;
 
 .TableContent{
     h5{
         font-size: 18px;
     }
 }}
+}
+
+@media  (min-width: 820px) and (max-width:900px){
+    .FAQSection {
+        margin-bottom: 18rem;
+    }
+}
+@media  (min-width: 900px) and (max-width:1025px){
+    .FAQSection {
+        margin-bottom: 30rem;
+    }
 }

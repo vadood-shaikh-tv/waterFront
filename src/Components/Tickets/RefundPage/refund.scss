@@ -1,15 +1,14 @@
 .RefundSection{
     .RefundDetailHead{
+        img{
+            width: 100%;
+        }
         h3{
             font-weight: 700;
+            text-align: start !important;
         }
     p{
         color: #4a4a4a;
     }
-    .RefundImage{
-        margin: 40px 0;
-        img{
-            width: 100%;
-        }
-    }
+   
 }}
