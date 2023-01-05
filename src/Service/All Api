@@ -1,0 +1,24 @@
+
+// {Event page Banner}
+// https://api.waterfrontconcerts.com/banners
+
+// {Event page}
+// https://api.waterfrontconcerts.com/events
+
+// {Vennue page}
+// https://api.waterfrontconcerts.com/venues
+
+// {Tickets Page ke options}
+// https://api.waterfrontconcerts.com/web/ticket-submenus
+
+// { Season seats 2023 API}
+// https://api.waterfrontconcerts.com/web/ticket-submenu?slug=2023-season-seats
+
+// {Faq page}
+// https://api.waterfrontconcerts.com/web/questions
+
+// {Featured component}
+// https://api.waterfrontconcerts.com/events?currentPage=1&eventType=ONSALE&pageSize=4&sortBy=location
+
+// {Venue chlid API}
+//api.waterfrontconcerts.com/events?currentPage=1&pageSize=12&venueId=5e2eea0d1700cb32758e0b98

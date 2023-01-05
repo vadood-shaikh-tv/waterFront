@@ -2,9 +2,7 @@ import "../Featured/featured.scss";
 import React, { useEffect, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import FeturedCard from "./FeaturedCardPage/FeturedCard";
-import APICalling from "../APICalling";
 import Axios from "../../Service/Instance";
-import GridIcon from "../../Assets/Images/listgrid.png"
 
 
 export default function Featured() {
@@ -32,7 +30,6 @@ export default function Featured() {
 
   return (
     <>
-      {/* <APICalling /> */}
       <div className="ShowsSection">
         <div className="container">
           <div className="row">

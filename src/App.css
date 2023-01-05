@@ -82,7 +82,7 @@ a {
 
 @media (max-width: 768px) {
   .mobileViewHide {
-    display: none;
+    display: none !important;
   }
   h1 {
     font-size: 32px;

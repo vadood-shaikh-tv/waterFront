@@ -4,10 +4,12 @@ import Navbar from "../Navbar/Navbar";
 import VenueCard from "./VenueCard/VenueCard";
 import "./venue.scss";
 import Axios from "../../Service/Instance";
+import LoadingImage from "../../Assets/Images/loading_Gif.gif"
 
 export default function Venue() {
   const [item, setItem] = useState([])
   const [visible, setVisible] = useState(8)
+  const [loading, setLoading] = useState(false);
 
   const LoadMore = () => {
     setVisible((Load) => Load + 8)
@@ -15,13 +17,23 @@ export default function Venue() {
 
 
   const APICalling = async () => {
-    const VenueResponse = await Axios.get("venues")
-    setItem(VenueResponse.data.data)
-    // console.log("RESPONSE OF VEBUE DATA", VenueResponse.data.data)
+    try {
+      setLoading(true)
+      const VenueResponse = await Axios.get("venues")
+      setItem(VenueResponse.data.data)
+      setLoading(false)
+    } catch (err) {
+      setLoading(false)
+    }
   }
   useEffect(() => {
     APICalling()
   }, [])
+  if (loading) {
+    return (<><div className="loadingDiv">
+      <img className="LoadingImage" src={LoadingImage} alt="" />
+    </div></>)
+  }
   return (
     <>
       <Navbar />

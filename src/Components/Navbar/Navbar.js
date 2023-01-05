@@ -9,7 +9,6 @@ export default function Navbar() {
   const ticketSubMenu = async () => {
     const response = await Axios.get('/web/ticket-submenus')
     setSubMenuData(response.data.data)
-    // console.log(response.data.data)
   }
   useEffect(() => {
     ticketSubMenu()
@@ -118,22 +117,22 @@ export default function Navbar() {
             </div>
             <div className="SocialIcons mobileViewHide extraHide">
               <a href="https://www.facebook.com/wfconcertsME">
-                <i className="fa-brands fa-facebook"></i>
+                <i className="fa-brands fa-facebook-f"></i>
               </a>
               <a href="https://twitter.com/wfconcerts">
-                {" "}
+
                 <i className="fa-brands fa-twitter"></i>
               </a>
               <a href="https://www.youtube.com/user/wfconcerts">
-                {" "}
+
                 <i className="fa-brands fa-youtube"></i>
               </a>
               <a href="https://www.instagram.com/wfconcerts/">
-                {" "}
+
                 <i className="fa-brands fa-instagram"></i>
               </a>
               <a href="https://www.snapchat.com/wfconcerts">
-                {" "}
+
                 <i className="fa-brands fa-snapchat"></i>
               </a>
             </div>

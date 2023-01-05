@@ -11,19 +11,15 @@ export default function SecondCard({ title }) {
         const cardResponse = await Axios.get("/events?currentPage=1&eventType=UPCOMING&pageSize=12")
         console.log("CardResponse", cardResponse.data.data)
         setItem(cardResponse.data.data)
-
     }
     useEffect(() => {
         CardApi()
     }, [])
 
-    // const current = new Date();
-    // const date = `${current.getDate()}/${current.getMonth() + 1}/${current.getFullYear()}`;
-
     return (
         <div className='SecondCardSection '>
             {item.map((item) => {
-                return <div>
+                return <div className='container'>
                     <div className='SecondCardContent'>
                         <div className='SeconCardDate'>
                             <div className='date'>
@@ -57,11 +53,13 @@ export default function SecondCard({ title }) {
                     <div className='SecondCardBuy HideOnWeb'>
                         <div className='PriceBtn'>
                             <button type="" className='Price'>
-                                10$
+                                {item.price}
                             </button>
                         </div>
                         <div className='BuuBtn'>
-                            <button type="" className='SaleHeading'> BUY NOW</button>
+                            <a href={item.generalTicketLink}>
+                                <button type="" className='SaleHeading'> BUY NOW</button>
+                            </a>
                         </div>
                     </div>
                 </div>

@@ -49,6 +49,9 @@
 
         .PartyHeading {
             margin-top: 30px;
+            p{
+                cursor: pointer;
+            }
 
             button {
                 outline: 3px solid #4CB2DC;
@@ -142,14 +145,6 @@
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media  (min-width: 768px) and (max-width:992px){
-    .XmaxCard {
-    // .XmasImage {
-    //     width: 50%;
-    // }
-    // .XmasDetails{
-    //     width: 50%;
-    // }
-}
 }
 
 /* Medium devices (landscape tablets, 768px and up) */

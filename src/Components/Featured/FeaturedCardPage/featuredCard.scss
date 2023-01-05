@@ -1,78 +1,86 @@
 .FeaturedCardSec {
     margin-top: 40px;
 
-.FeaturedCardSection{
-    .XmaxCard{
-    display: block;
-    margin-bottom: 50px;
-    .XmasImage{
-    .ShowDate{
-background-color: #ff2851;
-    }}
-    .XmasDetails{
-        text-align: center;
-        padding: 20px 0;
-        .EveHeading{
-            min-height: 60px;
-            h3{
-                font-weight: bold;
+    .FeaturedCardSection {
+        .XmaxCard {
+            display: block;
+            margin-bottom: 50px;
+
+            .XmasImage {
+                .ShowDate {
+                    background-color: #ff2851;
+                }
+            }
+
+            .XmasDetails {
+                text-align: center;
+                padding: 20px 0;
+
+                .EveHeading {
+                    min-height: 60px;
+
+                    h3 {
+                        font-weight: bold;
+                    }
+                }
+
+                .PlaceName {
+                    p {
+                        color: #ff2851;
+                        font-size: 13px;
+                        font-weight: 600;
+                    }
+                }
+
+                .PartyHeading {
+                    padding-bottom: 20px;
+                }
+            }
+
+            .cardFooter {
+                bottom: auto;
             }
         }
-        .PlaceName{
-            p{
-                color: #ff2851;
-                font-size: 13px;
-                font-weight: 600;
-            }
-        }
-        .PartyHeading{
-            padding-bottom: 20px;
-        }
     }
-    .cardFooter{
-        bottom: auto;
-    }
-    }
-}}
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media (max-width: 768px) {
-    .FeaturedCardSec{
-    .XmaxCard{
-        .XmasImage {
-            padding: 0;
-        }
-        margin-bottom: 30px;
-        .XmasDetails {
-            padding-bottom: 0 !important;
-            margin-bottom: 0px;
-            .cardFooter{
+    .FeaturedCardSec {
+        .XmaxCard {
+            .XmasImage {
                 padding: 0;
-                left: 0;
-                margin-bottom: 0 !important;
+            }
+
+            margin-bottom: 30px;
+
+            .XmasDetails {
+                padding-bottom: 0 !important;
+                margin-bottom: 0px;
+
+                .cardFooter {
+                    padding: 0;
+                    left: 0;
+                    margin-bottom: 0 !important;
+                }
+            }
         }
-    } 
     }
-    }
-  }
-  
-  
-  /* Small devices (portrait tablets and large phones, 600px and up) */
-  @media (min-width: 767px) and (max-width:992px) {
-    .FeaturedCardSec{
-   }
-  
-  }
-  
-  /* Medium devices (landscape tablets, 768px and up) */
-  @media (min-width: 992px) and (max-width:1200px) {
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media (min-width: 767px) and (max-width:992px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 992px) and (max-width:1200px) {
     .XmaxCard .XmasDetails {
         width: 100% !important;
     }
-  }
-  
-  /* Large devices (laptops/desktops, 992px and up) */
-  @media (min-width: 1200px) and (max-width:1400px) {}
-  
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
-  @media (min-width: 1400px) {}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 1200px) and (max-width:1400px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media (min-width: 1400px) {}

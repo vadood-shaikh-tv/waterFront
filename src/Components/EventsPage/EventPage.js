@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import "../EventsPage/event.scss";
-// import bannerImage from "../../Assets/Images/MainBg.jpg";
 import Navbar from "../Navbar/Navbar";
 import Featured from "../Featured/Featured";
 import Footer from "../Footer/Footer";
@@ -11,18 +10,26 @@ import SkyLineImage from "../../Assets/Images/sky_tunda_bg.png"
 import GreyLineImage from "../../Assets/Images/gray_tunda_bg.png"
 import PinkCut from "../../Assets/Images/pink_cut-Image.png"
 import Axios from "../../Service/Instance";
+import LoadingImage from "../../Assets/Images/loading_Gif.gif"
 
 
 export default function EventPage() {
   // Slider API
   const [item, setItem] = useState([]);
   const [venueData, setVenueData] = useState([])
-
+  const [loading, setLoading] = useState(false);
 
 
   const ApiCalling = async () => {
-    const response = await Axios.get('/banners')
-    setItem(response.data.data.banners)
+    try {
+      setLoading(true)
+      const response = await Axios.get('/banners')
+      setItem(response.data.data.banners)
+      setLoading(false)
+    }
+    catch (err) {
+      setLoading(false)
+    }
   }
   const VenueApiCall = async () => {
     const ResponseVenueApi = await Axios.get("venues")
@@ -33,7 +40,11 @@ export default function EventPage() {
     ApiCalling()
     VenueApiCall()
   }, [])
-
+  if (loading) {
+    return (<><div className="loadingDiv">
+      <img className="LoadingImage" src={LoadingImage} alt="" />
+    </div></>)
+  }
 
   return (
     <>
@@ -100,13 +111,10 @@ export default function EventPage() {
       </div>
       <div className="container">
         <div className="row">
-          <div className="col-sm-2">
-            <div className="companySec mobileViewHide">
-              {venueData.slice(0, 6).map((venueData) => {
-
-                return <CompanyNames img={venueData.featureImage} id={venueData._id} />
-              })}
-            </div>
+          <div className="companySec mobileViewHide">
+            {venueData.slice(0, 6).map((venueData) => {
+              return <CompanyNames img={venueData.featureImage} id={venueData._id} />
+            })}
           </div>
         </div>
       </div>

@@ -17,7 +17,6 @@ export default function Season() {
         ticketSubMenuData()
 
     }, [slug])
-    // https://api.waterfrontconcerts.com/web/ticket-submenu?slug=2023-season-seats
     return (<>
         <Navbar />
         <div className='MainCommon'>
@@ -27,7 +26,6 @@ export default function Season() {
                         <div className='col-md-12'>
                             <div className='SeasonHead border-BottomClass'>
                                 <div className='SeasonHeading'>
-                                    {/* <h1>2023 subMenuDataSEATS</h1> */}
                                     <h1> {subMenuData ? (subMenuData.title) : ""}</h1>
                                 </div>
                             </div>
@@ -37,9 +35,8 @@ export default function Season() {
                         <div className='col-md-12'>
                             <div className='SeasonTicketDetails boxStyle'>
                                 {
-                                    subMenuData.content ? parse(subMenuData.content) : "loading..."
+                                    subMenuData.content ? parse(subMenuData.content) : <h2>"Loading... Please wait"</h2>
                                 }
-
                             </div>
                         </div>
                     </div>

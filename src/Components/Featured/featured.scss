@@ -1,6 +1,6 @@
-
 .ShowsSection {
   background-color: #f6f6f6;
+
   .featuredShowSec {
     margin-top: 30px;
   }
@@ -61,10 +61,12 @@
       display: flex;
       align-items: center;
       position: relative;
-      .form-select:focus{
+
+      .form-select:focus {
         box-shadow: none;
       }
-      .gridicon1{
+
+      .gridicon1 {
         background-image: url(../../Assets/Images/listgrid.png);
         margin-left: 20px;
         cursor: pointer;
@@ -74,7 +76,8 @@
         display: inline-block;
         background-position: 0px 0;
       }
-      .LightGridIcon1{
+
+      .LightGridIcon1 {
         background-image: url(../../Assets/Images/listgrid.png);
         margin-left: 20px;
         cursor: pointer;
@@ -84,7 +87,8 @@
         display: inline-block;
         background-position: 0px 20px;
       }
-      .gridicon2{
+
+      .gridicon2 {
         background-image: url(../../Assets/Images/listgrid.png);
         margin-left: 20px;
         cursor: pointer;
@@ -94,7 +98,8 @@
         display: inline-block;
         background-position: 24px 0;
       }
-      .LightGridIcon2{
+
+      .LightGridIcon2 {
         background-image: url(../../Assets/Images/listgrid.png);
         margin-left: 20px;
         cursor: pointer;
@@ -104,7 +109,7 @@
         display: inline-block;
         background-position: 24px 20px;
       }
-      
+
     }
   }
 
@@ -146,23 +151,6 @@
   }
 }
 
-// ul.nav.nav-tabs {
-//   justify-content: end;
-//   border: 0;
-//   position: relative;
-//   top: -70px;
-//   left: -83px;
-// button#controlled-tab-example-tab-home {
-//     color: transparent;
-//     background-color: transparent;
-//     border: 0;
-// }
-// button#controlled-tab-example-tab-profile{
-//   color: transparent;
-//     background-color: transparent;
-//     border: 0;
-// }
-// }
 
 /* Extra small devices (phones, 600px and down) */
 @media (max-width: 768px) {
@@ -188,7 +176,7 @@
           position: absolute;
           top: 5px;
           right: 0;
-        
+
         }
       }
     }
@@ -207,15 +195,17 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media (min-width: 768px) and (max-width:992px) {
   .ShowsSection {
-    
+
     .upcomingShowSec {
       margin-top: 60px;
-      .featuredContent{
+
+      .featuredContent {
         display: block;
-        .SelectSec{
+
+        .SelectSec {
           justify-content: space-between;
           margin-top: 20px;
-          
+
         }
       }
     }

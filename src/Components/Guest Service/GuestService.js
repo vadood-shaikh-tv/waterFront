@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-
 import AccessibleIcon from "../../Assets/Images/guestIcon1.png";
 import ACCOMODATIONICON from "../../Assets/Images/guestIcon2.png";
 import CLEARICON from "../../Assets/Images/guestIcon3.png";

@@ -2,99 +2,121 @@
     margin: 10px 0;
     padding: 0;
 
-.SecondCardContent {
-    display: flex;
-    justify-content: space-between;
-    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
-    margin-top: 10px;
-    .SeconCardDate {
-        background-color: #000;
-        color: #fff;
-        font-weight: 500;
-        font-size: 18px;
-        text-align: center;
-        width: 46px;
-        .date {
-            padding: 15px 10px;
-        }
-    }
-    .SecondCardTitle {
+    .SecondCardContent {
         display: flex;
-        width: calc(100% - 22%);
         justify-content: space-between;
-        align-items: center;
-        h3 {
-            font-weight: 700;
-        }
-        p {
-            color: #ff2851;
-            font-weight: 600;
-        }
-        .LeftDiv {
-            margin-right: 60px;
+        box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+        margin-top: 10px;
+
+        .SeconCardDate {
+            background-color: #000;
+            color: #fff;
+            font-weight: 500;
+            font-size: 18px;
             text-align: center;
-        a {
-            color: #4cb2dc;
-            text-decoration: underline;
+            width: 46px;
+
+            .date {
+                padding: 15px 10px;
+            }
+        }
+
+        .SecondCardTitle {
+            display: flex;
+            width: calc(100% - 22%);
+            justify-content: space-between;
+            align-items: center;
+
+            h3 {
+                font-weight: 700;
+            }
+
+            p {
+                color: #ff2851;
+                font-weight: 600;
+            }
+
+            .LeftDiv {
+                margin-right: 60px;
+                text-align: center;
+
+                a {
+                    color: #4cb2dc;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .SecondCardBuy {
+            width: calc(100% - 85%);
         }
     }
-    }
-    .SecondCardBuy {
-        width: calc(100% - 85%);}
-}
-button.Price {
-    background-color: #4A4A4A;
-    color: #fff;
-    padding: 8px 0;
-    border: 0;
-    font-size: 17px;
-    font-weight: 600;
-    width: 100%;
-}
-.SaleHeading {
-    width: 100%;
-    background-color: #FF2851;
-    border: 0;
-    color: #fff;
-    font-size: 17px;
-    font-weight: 600;
-    padding: 8px 0;
-}
-.HideOnWeb {
-    display: flex;
-    .PriceBtn{
+
+    button.Price {
+        background-color: #4A4A4A;
+        color: #fff;
+        padding: 8px 0;
+        border: 0;
+        font-size: 17px;
+        font-weight: 600;
         width: 100%;
     }
-    .BuuBtn{
+
+    .SaleHeading {
         width: 100%;
+        background-color: #FF2851;
+        border: 0;
+        color: #fff;
+        font-size: 17px;
+        font-weight: 600;
+        padding: 8px 0;
     }
-}
+
+    .HideOnWeb {
+        display: flex;
+
+        .PriceBtn {
+            width: 100%;
+        }
+
+        .BuuBtn {
+            width: 100%;
+        }
+    }
 }
 
 
 
 /* Extra small devices (phones, 600px and down) */
-@media  (max-width: 768px) {
-    .SecondCardSection .SecondCardContent{
+@media (max-width: 768px) {
+    .SecondCardSection {
+        .SecondCardContent {
+            margin-top: 30px;
 
-     .SecondCardTitle{
-width: 100%;
-padding: 0 10px;
-.LeftDiv{
-    margin-right: 10px;
-}
+            .SecondCardTitle {
+                display: block;
+                width: 100%;
+                padding: 20px;
+
+                .LeftDiv {
+                    margin-right: 10px;
+                    text-align: start;
+                    margin-top: 40px;
+                    margin-bottom: 25px;
+                }
+            }
+        }
     }
-}
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media  (min-width: 768px) and (max-width:992px){}
+@media (min-width: 768px) and (max-width:992px) {}
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media  (min-width: 992px) and (max-width:1200) {}
+@media (min-width: 992px) and (max-width:1200) {}
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media  (min-width: 1200px) and (max-width:1400) {}
+@media (min-width: 1200px) and (max-width:1400) {}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media  (min-width: 1400px) {}
+@media (min-width: 1400px) {}

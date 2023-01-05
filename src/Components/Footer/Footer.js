@@ -9,8 +9,6 @@ export default function Footer() {
   return (
     <>
       <div className="footer--pin">
-
-
         <footer>
           <div className="FooterSection">
             <div className="container foot">
@@ -26,10 +24,14 @@ export default function Footer() {
                         FAVORITE YOUR SHOWS. GET UPDATES.
                       </span>
                       <span className="AppstoreIcon">
-                        <img src={AppStoreIcon} alt="" />
+                        <a href="https://play.google.com/store/apps/details?id=com.sephone.WaterfrontConcertsNew">
+                          <img src={AppStoreIcon} alt="" />
+                        </a>
                       </span>
                       <span className="googleAppIcon">
-                        <img src={GooglePlayIcon} alt="" />
+                        <a href="https://apps.apple.com/us/app/waterfront-concerts/id673252714">
+                          <img src={GooglePlayIcon} alt="" />
+                        </a>
                       </span>
                     </div>
                   </div>
@@ -43,7 +45,6 @@ export default function Footer() {
                 <a className="navbar-brand" href="#">
                   <img className="HeaderLogoIcon" src={HeaderLogo} alt="" />
                 </a>
-
                 <ul className="pagelinks">
                   <NavLink className="footer-nav-link" to="/">
                     <li >
@@ -65,9 +66,9 @@ export default function Footer() {
                       <a href="/job">JOB</a>
                     </li>
                   </NavLink>
-                  <NavLink className="footer-nav-link" to="/Contact">
+                  <NavLink className="footer-nav-link" to="../contact">
                     <li>
-                      <a href="/contact">CONTACT</a>
+                      <a href="../contact">CONTACT</a>
                     </li>
                   </NavLink>
                   <NavLink className="footer-nav-link" to="/FAQ">
@@ -78,7 +79,7 @@ export default function Footer() {
                 </ul>
                 <div className="SocialIcons">
                   <a href="https://www.facebook.com/wfconcertsME">
-                    <i className="fa-brands fa-facebook"></i>
+                    <i className="fa-brands fa-facebook-f"></i>
                   </a>
                   <a href="https://twitter.com/wfconcerts">
                     {" "}
@@ -91,6 +92,7 @@ export default function Footer() {
                   <a href="https://www.instagram.com/wfconcerts/">
                     {" "}
                     <i className="fa-brands fa-instagram"></i>
+
                   </a>
                   <a href="https://www.snapchat.com/wfconcerts">
                     {" "}

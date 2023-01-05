@@ -7,6 +7,7 @@
         padding: 20px 15px;
         display: flex;
         width: -webkit-fill-available;
+
         img.companyIcon {
             width: -webkit-fill-available;
             filter: grayscale(100%);
@@ -16,7 +17,7 @@
         img.companyIcon:hover {
             filter: grayscale(0%);
         }
-    
+
     }
 }
 
@@ -30,21 +31,10 @@
             padding: 15px 5px;
         }
     }
-
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media (min-width: 992px) and (max-width:1200px) {
-    // .XmaxCard {
-    //     .XmasImage {
-    //         width: 30% !important;
-    //     }
-
-    //     .XmasDetails {
-    //         width: 30% !important;
-    //     }
-    // }
-}
+@media (min-width: 992px) and (max-width:1200px) {}
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media (min-width: 1200px) and (max-width:1400px) {}

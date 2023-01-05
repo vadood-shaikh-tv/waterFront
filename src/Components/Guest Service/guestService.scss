@@ -1,6 +1,5 @@
-
 .GuestSection {
-   
+
     .GuestDetails {
         margin-top: 25px;
 
@@ -48,11 +47,13 @@
 
                     .form-outline {
                         width: calc(100% - 210px);
+
                         select.form-select {
                             padding: 9px 40px;
                             box-shadow: none;
                             border-radius: 0;
-                            &:focus{
+
+                            &:focus {
                                 border: 1px solid #ced4da;
                             }
                         }
@@ -100,89 +101,101 @@
         .LostSection {
             padding-top: 10px !important;
         }
-        .LostSection{
-            .LostHeading
-            { h3:hover {
-                text-decoration: none !important;
+
+        .LostSection {
+            .LostHeading {
+                h3:hover {
+                    text-decoration: none !important;
+                }
+
+                p {
+                    font-size: 12px;
+                    margin-bottom: 8px;
+                }
             }
-            p {
-                font-size: 12px;
-                margin-bottom: 8px;
-            }
-        }
-            .LostFormSec{
+
+            .LostFormSec {
                 textarea#floatingTextarea2 {
-                     height: 110px !important;
-                    }
-                    .SubmitBtn {
-                        background-color: #FF2851;
-                        text-transform: uppercase;
-                        height: 44px;
-                        border: none;
-                        font-size: 18px;
-                        margin-top: 15px;
-                        font-weight: 700;
-                        color: #fff;
-                        width: 100%;
-                    }
+                    height: 110px !important;
+                }
+
+                .SubmitBtn {
+                    background-color: #FF2851;
+                    text-transform: uppercase;
+                    height: 44px;
+                    border: none;
+                    font-size: 18px;
+                    margin-top: 15px;
+                    font-weight: 700;
+                    color: #fff;
+                    width: 100%;
                 }
             }
         }
     }
+}
 
-    /* Extra small devices (phones, 600px and down) */
-@media  (max-width: 768px) {
-    
-    .GuestSection{ .input-group {
-        display: block;
-        width: 100%;
-        
-        .form-outline {
-            width: calc(100% - 0px) !important;
-            
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 768px) {
+
+    .GuestSection {
+        .input-group {
+            display: block;
+            width: 100%;
+
+            .form-outline {
+                width: calc(100% - 0px) !important;
+
+            }
+        }
+
+        .GuestHeading {
+            margin-top: 20px;
         }
     }
-     .GuestHeading {
-        margin-top: 20px ;
-    }
-    }
-    .SetPosition button.SeacrhFaqbtn{
+
+    .SetPosition button.SeacrhFaqbtn {
         width: 100% !important;
         margin-left: 1px !important;
     }
+
     .boxStyle {
-        padding:20px !important;
-         h3 {
+        padding: 20px !important;
+
+        h3 {
             margin-top: 5px !important;
         }
-        .GoFaqBtn{
+
+        .GoFaqBtn {
             width: 100%;
         }
+
         img {
             margin-bottom: 15px;
         }
     }
-    .LostSection{
+
+    .LostSection {
         margin-top: 20px;
     }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media  (min-width: 768px) and (max-width:992px){
+@media (min-width: 768px) and (max-width:992px) {
     .VenueShowsCard .VenueCardSection .VenueCard .card {
         min-height: 313px;
     }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media  (min-width: 992px) and (max-width:1200px) {
+@media (min-width: 992px) and (max-width:1200px) {
     .VenueShowsCard .VenueCardSection .VenueCard .card {
         min-height: 313px;
     }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media  (min-width: 1200px) and (max-width:1400px) {}
+@media (min-width: 1200px) and (max-width:1400px) {}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media  (min-width: 1400px) {}
+@media (min-width: 1400px) {}
