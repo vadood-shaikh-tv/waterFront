@@ -7,17 +7,20 @@ import "./season.scss"
 import parse from 'html-react-parser';
 
 export default function Season() {
+
     const [subMenuData, setSubMenuData] = useState([])
     const { slug } = useParams()
     const ticketSubMenuData = async () => {
         const response = await Axios.get(`/web/ticket-submenu?slug=${slug}`)
         setSubMenuData(response.data.data)
+        // console.log(response.data.data)
     }
     useEffect(() => {
         ticketSubMenuData()
 
     }, [slug])
     return (<>
+
         <Navbar />
         <div className='MainCommon'>
             <div className='SeasonTicketsSection hiring'>

@@ -9,13 +9,21 @@ export default function Navbar() {
   const ticketSubMenu = async () => {
     const response = await Axios.get('/web/ticket-submenus')
     setSubMenuData(response.data.data)
+    console.log(response.data.data)
+
   }
   useEffect(() => {
     ticketSubMenu()
   }, [])
 
+
   return (
     <>
+      {/*  */}
+
+      {/*  */}
+
+
       <div className="NavbarSection">
         <nav className="navbar navbar-expand-lg ">
           <div className="container">
@@ -86,7 +94,7 @@ export default function Navbar() {
                   </a>
                   <ul className="dropdown-menu">
                     {
-                      subMenuData ? subMenuData.map((menu) => {
+                      subMenuData ? subMenuData.filter((item) => item.title !== "Jobs").map((menu) => {
                         return <Link to={`/Season/${menu.slug}`} >
                           <li>
                             <a className="dropdown-item">
