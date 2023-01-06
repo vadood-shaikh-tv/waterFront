@@ -20,7 +20,6 @@ export default function Featured() {
   }, [])
 
   const [isActive, setIsActive] = useState(false);
-  const [isActiveSecond, setIsActiveSecond] = useState(false);
 
   const handleClick = event => {
     // 👇️ toggle isActive state on click

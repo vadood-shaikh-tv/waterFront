@@ -10,7 +10,7 @@ export default function Card() {
     const cardResponse = await Axios.get(
       "/events?currentPage=1&eventType=UPCOMING&pageSize=12"
     );
-    // console.log("CardResponse", cardResponse.data.data)
+    console.log("CardResponse", cardResponse.data.data)
     setItem(cardResponse.data.data);
   };
   useEffect(() => {
@@ -38,10 +38,10 @@ export default function Card() {
                     </a>
                   </div>
                   <div className="PartyHeading">
-                    <p>{item.subTitle}</p>
-                    <button type="">
+                    <p className="CardSub-title">{item.subTitle}</p>
+                    {/* <button type="">
                       <img src={packageIcon} alt="" /> PACKAGE
-                    </button>
+                    </button> */}
                     <a href={item.link}>
                       <p>{item.seoDescription}</p>
                     </a>

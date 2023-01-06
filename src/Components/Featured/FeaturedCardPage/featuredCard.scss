@@ -57,6 +57,9 @@
             .XmasDetails {
                 padding-bottom: 0 !important;
                 margin-bottom: 0px;
+                .EveHeading{
+                    min-height: unset !important;
+                }
 
                 .cardFooter {
                     padding: 0;

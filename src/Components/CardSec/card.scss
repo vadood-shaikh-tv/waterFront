@@ -41,18 +41,25 @@
         position: relative;
         background-color: #fff;
         width: 100%;
+        padding-right: 20px;
 
         .EveHeading h5 {
             color: #000;
-            font-weight: 700;
+            font-weight: 700;    
+            font-size: 22px;
         }
 
         .PartyHeading {
-            margin-top: 30px;
+            margin-top: 50px;
             p{
                 cursor: pointer;
             }
-
+            p.CardSub-title{
+                font-size: 13px;
+                margin-bottom: 8px;
+                color: #ff2851;
+                text-transform: uppercase;
+            }
             button {
                 outline: 3px solid #4CB2DC;
                 background-color: #4CB2DC;
@@ -131,7 +138,7 @@
         text-align: center;
         padding-left:0;
          .PartyHeading {
-            margin-top: 50px;
+            margin-top: 30px;
         }
          .cardFooter {
             bottom: unset;

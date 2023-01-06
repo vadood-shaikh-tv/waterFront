@@ -26,11 +26,10 @@ export default function Faq() {
       setLoading(false);
     }
   };
-  /**
-     * 
-    //  * @param {* in order to show active id  of particular item} id 
+  /*
+     * @param {* in order to show active id  of particular item} id 
      * @param {* list of questionsSet @arr} arr 
-     */
+  */
   const isSideBarActive = (id, arr) => {
     setQuestions(arr);
     setActiveId(id);
