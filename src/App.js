@@ -19,8 +19,8 @@ function App() {
       <div className="MAIN">
         <Routes>
           <Route path="/" element={<EventPage />}>
-            <Route path="Card" element={<Card />} />
-            <Route path="SecondCard" element={<SecondCard />} />
+            <Route path="/Card" element={<Card />} />
+            <Route path="/SecondCard" element={<SecondCard />} />
           </Route>
           <Route path="/Featured" element={<Featured />} />
           <Route path="/Venue" element={<Venue />} />

@@ -9,7 +9,7 @@ export default function Navbar() {
   const ticketSubMenu = async () => {
     const response = await Axios.get('/web/ticket-submenus')
     setSubMenuData(response.data.data)
-    console.log(response.data.data)
+    // console.log(response.data.data)
 
   }
   useEffect(() => {
@@ -19,11 +19,6 @@ export default function Navbar() {
 
   return (
     <>
-      {/*  */}
-
-      {/*  */}
-
-
       <div className="NavbarSection">
         <nav className="navbar navbar-expand-lg ">
           <div className="container">
@@ -147,7 +142,6 @@ export default function Navbar() {
           </div>
         </nav >
       </div >
-
     </>
   );
 }

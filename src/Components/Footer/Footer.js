@@ -82,20 +82,15 @@ export default function Footer() {
                     <i className="fa-brands fa-facebook-f"></i>
                   </a>
                   <a href="https://twitter.com/wfconcerts">
-                    {" "}
                     <i className="fa-brands fa-twitter"></i>
                   </a>
                   <a href="https://www.youtube.com/user/wfconcerts">
-                    {" "}
                     <i className="fa-brands fa-youtube"></i>
                   </a>
                   <a href="https://www.instagram.com/wfconcerts/">
-                    {" "}
                     <i className="fa-brands fa-instagram"></i>
-
                   </a>
                   <a href="https://www.snapchat.com/wfconcerts">
-                    {" "}
                     <i className="fa-brands fa-snapchat"></i>
                   </a>
                 </div>

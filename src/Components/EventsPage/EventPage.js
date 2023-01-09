@@ -19,7 +19,6 @@ export default function EventPage() {
   const [venueData, setVenueData] = useState([])
   const [loading, setLoading] = useState(false);
 
-
   const ApiCalling = async () => {
     try {
       setLoading(true)
@@ -33,7 +32,7 @@ export default function EventPage() {
   }
   const VenueApiCall = async () => {
     const ResponseVenueApi = await Axios.get("venues")
-    console.log(ResponseVenueApi.data.data)
+    // console.log(ResponseVenueApi.data.data)
     setVenueData(ResponseVenueApi.data.data)
   }
   useEffect(() => {
@@ -49,7 +48,6 @@ export default function EventPage() {
   return (
     <>
       <Navbar />
-
       {/* slider */}
       <div className="Slider">
         <Carousel>
@@ -62,7 +60,6 @@ export default function EventPage() {
                     src={e.image}
                     alt="First slide"
                   />
-
                   <Carousel.Caption>
                     <div className="NewShowSec">
                       <div key={index} className="NewShowDetail">
@@ -123,4 +120,3 @@ export default function EventPage() {
     </>
   );
 }
-

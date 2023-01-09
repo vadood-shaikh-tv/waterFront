@@ -10,7 +10,7 @@ export default function Card() {
     const cardResponse = await Axios.get(
       "/events?currentPage=1&eventType=UPCOMING&pageSize=12"
     );
-    console.log("CardResponse", cardResponse.data.data)
+    // console.log("CardResponse", cardResponse.data.data)
     setItem(cardResponse.data.data);
   };
   useEffect(() => {
